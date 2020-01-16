@@ -1,0 +1,157 @@
+#header
+{
+	background-image: url(banner_blurred.png) ;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size:  cover;
+    background-color: white;
+	width:100vw;
+}
+
+.blog_name
+{
+	font-family: 'Kaushan Script', cursive;
+	text-shadow: 2px 2px 4px black;
+	color : white;
+	font-size:4em;
+	margin-bottom:80px;
+}
+
+.blog_subject
+{
+	font-size:1.8em;
+	text-shadow: 1px 1px 2px black;
+	margin-left:20%;
+	margin-right:20%;
+}
+
+#burger_menu_full
+{
+	position:fixed;
+	top:10px;
+	left: 1vw;
+	z-index:10;
+	color : white;
+	font-size:1.5em;
+	padding-left:8px;
+	padding-right:8px;
+	background-color:rgba(0,0,0,0.3);
+	border-radius : 5px;
+	
+	transition:all 0.5s ease-out;
+}
+
+#burger_menu_close
+{
+	display:none;
+}
+
+
+.left_menu
+{
+	width:4vw;
+	height:100vh;
+	background-color:rgb(40, 40, 40);
+	position: fixed;
+	left : 0vw;
+	top : 0px;
+	
+	display: flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+	
+	z-index:3;
+	
+	transition: all 0.5s ease;
+}
+
+
+#to_home
+{
+	text-align:center;
+	font-family: 'Kaushan Script', cursive;
+	text-shadow: 2px 2px 4px black;
+	color : rgb(240,240,240);
+	font-size:1.5vw;
+	margin-top:10px;
+	
+	transform:rotate(0deg);
+	
+	transition:all 0.3s ease;
+}
+
+#to_home:hover
+{
+	font-size:1.8vw;
+	
+	transform:rotate(-10deg);
+	margin-top:5px;
+	
+	transition:all 0.3s ease;
+}
+
+
+
+nav
+{
+	font-size : 1em;
+	color: rgb(240,240,240);
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+.point
+{	
+	position: relative;
+	display: inline-block;
+}
+
+
+
+.point .tooltiptext
+{
+	visibility: hidden;
+	background-color: rgb(40, 40, 40);
+	text-align: center;
+	padding: 5px 0;
+	padding-left : 10px;
+	padding-right : 10px;
+	border-radius: 6px;
+ 
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 5;
+	top: -5px;
+    left: 4vw;
+	
+	opacity:0%;
+	transition: all 0.3s ease;
+}
+
+.point a
+{
+	color:rgb(240,240,240);
+}
+
+.point:hover .tooltiptext
+{
+	visibility:visible;
+	opacity:100%;
+	transition: all 0.3s ease;
+}
+
+#footer_center
+{
+	border-top:1px solid black;
+	font-size:1em;
+	padding-top:20px;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+}
+
