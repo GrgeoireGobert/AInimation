@@ -85,43 +85,211 @@
 	<div class="columns">
 	  <div class="column is-2"></div>
 	  <div class="column is-8">
-		<section class="section ">
+		<section class="section">
 			<div class="container">
-			  <h1 class="title">Section</h1>
+			  <h1 class="title">Les script, qu'est-ce que c'est ?</h1>
 				  <h2 class="subtitle">
-					A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+					<!-- Rien pour le moment --></br>
+				  </h2>
+				  
+					<p>
+					Chaque film d'animation naît d'un scénario, qu'il va ensuite falloir transcrire en images, en dialogues et en musique. Le script est un document écrit qui a contient tous les éléments nécessaire à l'élaboration de chaque plan : décor, mouvement des personnages, dialogues, musiques, indications techniques, etc. Voici un extrait du script du film "Toys Story" du studio Pixar en 1995 (issu de <a href="http://www.dailyscript.com/">DailyScript</a>):
+					</p>
+					
+					<blockquote>
+						
+											"TOY STORY"</br>
+					</br>
+					FADE IN:</br>
+					INT. ANDY'S BEDROOM</br>
+					A row of moving boxes lie on the floor of the room.  They
+					are drawn up in crayon to look like a miniature Western town.
+					The bedroom is lined with cloud wallpaper giving the
+					impression of sky.</br>
+					One of the boxes has a children's illustrated "WANTED"
+					poster of a Mr. Potato Head taped to it.</br>
+					A MR. POTATO HEAD DOLL is set in front of the poster.  The
+					VOICE OVER of ANDY, a 6-year-old boy, can be heard acting
+					out all the voices of the scene.</br>
+					</br>
+											 ANDY (AS POTATO HEAD)</br>
+								"Alright everyone, this is a stick-
+								up!  Don't anybody move!  Now empty
+								that safe!"</br>
+					</br>
+					A GROUP OF TOYS have been crowded together in front of the
+					"BANK" box.</br>
+					Andy's hand lowers a CERAMIC PIGGY BANK in front of Mr.
+					Potato Head and shakes out a pile of coins to the floor.  Mr.
+					Potato Head kisses the coins.</br>
+					</br>
+											 ANDY (AS POTATO HEAD)</br>
+								"Ooh!  Money.  Money.  Money."
+									   (kissing noises)
+					</blockquote>
+					
+					<p>
+					La production finale dépend donc grandement de la qualité du scénario et de son script. Il y a cependant une grande part de subjectivité, propre à chacun, lors du jugement de la qualité de ceux-ci. L'utilisation d'outils d'intelligence articielle pourrait-elle réduire le risque de mauvais choix lors de l'élaboration d'un script ? Serait-il même possible qu'une intelligence écrive le script parfait ?
+					</p>
+					<p>
+					Comme nous le verrons, ces questions sont déjà à l'ordre du jour !
+					</p>
+			</div>
+		</section>
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<section class="section">
+			<div class="container">
+			  <h1 class="title">Analyse des émotions du spectateur</h1>
+				  <h2 class="subtitle">
+					Pour savoir ce qui plaît.
+				  </h2>
+				  
+					<p>
+					Des chercheurs des laboratoires de Disney <a href="#ref_1">[1]</a> ont mis au point un outil, basé sur des méthodes d'intelligence artificielle, afin d'analyser le comportement de spectateurs devant un film d'animation et d'en déduire une note moyenne pour le film, comme celles disponibles sur des sites comme <a href="http://www.allocine.fr/">Allociné</a> ou <a href="https://www.rottentomatoes.com/">RottenTomatoes</a>. Un tel outil présente au moins deux utilités principales :
+					<ol>
+					<li>Pouvoir prédire si un nouveau film va plaire, en analysant le comportement d'un panel de spectateurs, et ajuster la promotion en conséquence.</li>
+					<li>Déterminer, sur d'anciens films d'animation, les éléments qui ont fait leur succés et les utiliser pour élaborer le script des films suivants.</li>
+					</ol>
+					</p>
+					
+				  <h2 class="subtitle">
+					Méthode employée.
+				  </h2>
+					<p>
+					Les principales étapes de la méthode mise au point par les chercheurs sont les suivantes :
+					<ol>
+					<li>Toud d'abord, utiliser une caméra et isoler les différents spectateurs.</li>
+					<li>Ensuite, capter le mouvement de chacun des spectateurs.</li>
+					<li>En déduire une mesure de caractéristique de leur comportement au cours du temps</li>
+					<li>Corréler le comportement d'un individu avec celui de l'ensembles des spectateurs</li>
+					<li>Utiliser ces mesures pour entrainement un algorithme d'intelligence artificielles capable de prédire la note du film.</li>
+					<li>Utiliser ces mesures pour analyser les moments clés du film.</li>
+					</ol>
+					</p>
+					
+					<br/>
+					
+					<p>
+					Utiliser une caméra et réaliser de l'analyse d'image afin d'isoler les différents spectateurs est une tâche plus complexe qu'il n'y paraît. En effet, les conditions d'obscurité dues à la projection du film requièrent l'emploi de caméras infrarouges pour obtenir une image exploitable. Cependant, cette dernière étant différente et moins détaillée, les algorithmes classiques de reconnaissance de visages offrents de mauvaises performances. Heureusement, les spectateurs étant dans leur siège durant la totalité de la projection, il est possible de partitionner l'image pour isoler les individus.
+					</p>
+					
+					<br/>
+					
+					<p>
+					Ensuite, l'idée est de caractérisée le comportement d'un individu par rapport à son mouvement. Intuitivement, si un spectateur est absorbé par le film projeté, il va très peu bouger. Au contraire, si le film l'ennuie, il aura tendance à beaucoup bouger, à se distraire. Pour calculer cette mesure du mouvement, les chercheurs s'appuient sur des algorithmes d'analyse d'images pour suivre des points d'intêret et en déduire leur vitesse de déplacement. Tout cela mène à la définition d'une certaine entropie (mesure du désordre), mesurée sur un certain intervalle de temps, et qui évolue lors de la diffusion du film.
+					</p>
+					
+					<br/>
+					
+					<p>
+					Cependant, l'analyse des individus séparément ne suffit pas. En effet, la simultanéité des comportements est une information essentielle. Elle permet, par exemple, de savoir quand l'ensemble de l'audience a ri. Les évolutions temporelles de l'entropie de chaque individu sont donc comparées entre elles pour en déduire une certaine corrélation.
+					</p>
+					
+					<br/>
+					
+					<p>
+					Une fois que toutes ces caractéristiques ont été extraites, elles vont être utilisées pour entrainer et tester un algorithme d'intelligence artificielles. Les strutures employées par les chercheurs sont des réseaux de neurones linéaires et des SVM. Le jeu de données a été réalisé en choisissant, sur le site <a href="https://www.rottentomatoes.com/">RottenTomatoes</a>, 10 films d'animations aux notes variées, en les projetant 3 fois chacun, puis en filmant et analysant le comportement des spectateurs lors de chacune des projection. Les données d'entrée sont donc les évolutions temporelles de l'entropie de chacun et leur corrélation, et les labels souhaités sont les notes des films sur le site utilisé.
+					</p>
+					
+					<figure class="image" style="width:100%;">
+						<img src="images/analyse_comp_modeles.png" width="100%"></img>
+						<p>Les structures des modèles réalisée : (à gauche) un modèle basé sur le comportement individuel et (à droite) un modèle basé sur la corrélation entre les comportements de chacun.</p>
+					</figure>
+					
+					<br/>
+					
+					<p>
+					Même si l'élaboration des données d'entrainement et l'extraction des caractéristiques utiles sont des étapes longues et compliquées, les résultats obtenus par les chercheurs sont bons, présentant une erreur moyenne d'environ 13%.				
+					</P>
+					
+					<figure class="image" style="width:70%;">
+						<img src="images/analyse_comp_result.png" width="100%"></img>
+						<p>Comparaison entre les résultats du modèles (en vert) et ceux issus du site spécialisé (en bleu).</p>
+					</figure>
+					
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<section class="section">
+			<div class="container">
+			  <h1 class="title">Vers un scénario écrit par la machine ?</h1>
+				  <h2 class="subtitle">
+					Big data et intelligence artificielle, les scénaristes de demain.</br>
 				  </h2>
 				  
 				  <p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor arcu nec quam pellentesque, et pretium tellus aliquam. Suspendisse id est quis elit venenatis auctor. Suspendisse potenti. Curabitur cursus mattis magna. Mauris in maximus orci. Nam fringilla nibh quis tortor dictum condimentum. Praesent quam sapien, lobortis vitae convallis nec, egestas eget lacus. Vestibulum dapibus magna id tellus ultrices ullamcorper.
-				</p>
-				<p>
-				Etiam pharetra tristique elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem nulla, ullamcorper sit amet ultrices mattis, molestie vitae ipsum. In aliquet vulputate ipsum quis rutrum. Morbi imperdiet nunc vel luctus varius. Sed et rutrum enim, et dictum dui. Pellentesque posuere commodo quam, vel fermentum enim pellentesque id. Phasellus condimentum nisi eget tellus suscipit scelerisque. Suspendisse potenti. Donec sed sagittis dolor. Duis quis volutpat diam, quis mollis purus. Mauris lacus libero, rhoncus quis convallis et, mattis quis odio. Fusce diam risus, finibus et ipsum vel, tempus aliquet mi. Nulla quis quam eleifend, auctor elit quis, bibendum purus. Sed ac mi quam. Morbi gravida, arcu at luctus tempus, velit nulla gravida ex, id lacinia nibh nibh at justo.
-				</p>
-				
-				<figure class="image" style="width:35%;">
-					<img src="miles.jpg" width="100%"></img>
-					<p>Une image est toujours accompagnée d'une légende avec des sources</p>
-				</figure>
-				
-				<p>
-				Suspendisse ut mauris eget mi tempor accumsan non sit amet neque. Maecenas eget convallis nunc. Integer rhoncus nunc non risus faucibus fringilla. Nulla in nunc erat. Nunc ac ligula ut sapien lobortis bibendum ut non nisl. Nullam vel tortor sed tortor pulvinar egestas eget sed massa. Etiam ultrices scelerisque gravida. Vivamus vel sollicitudin metus. Donec tincidunt condimentum luctus. Suspendisse porta blandit odio, id consequat diam fermentum a. Sed congue magna ac semper bibendum.
-				</p>
-				<p>
-				Aliquam fermentum cursus aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ac dignissim lorem. Aliquam vel luctus velit. Fusce placerat, dui sit amet interdum eleifend, augue nibh placerat eros, elementum vestibulum nunc arcu sit amet lorem. Quisque faucibus ante a quam pellentesque, a elementum felis condimentum. Ut posuere consectetur massa sed lobortis. Nullam porta leo a lectus euismod tempor. Etiam rutrum egestas felis, eget tincidunt urna fermentum nec. Suspendisse semper molestie efficitur. Quisque finibus cursus leo, nec ornare nisi. Maecenas eu lectus at lectus vehicula aliquet.
-				</p>
-				
-				<figure class="image" style="width:50%;">
-					<iframe width="100%"  height="350" src="https://www.youtube.com/embed/h_HAVnDCfkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<p>Une vidéo est toujours accompagnée d'une légende avec des sources</p>
-				</figure>
-				
-				<p>
-				Sed a porta quam. Pellentesque ac eleifend magna. Sed nec sem sem. Vestibulum euismod porta est, at cursus nisi rutrum at. Morbi tincidunt sapien a est efficitur efficitur. Aliquam sed erat quam. Phasellus vel neque a ex efficitur dictum. Fusce ac efficitur risus. Praesent eu ipsum ac lorem semper varius. Suspendisse elementum orci vel tellus fringilla consequat.
-				</p>
+				  Un algorithme d'intelligence artificielle serait-il capable d'écrire script parfait d'un film d'animation ? Peut-être pas encore, mais de grands pas dans cette direction ont déjà été faits.
+				  </p>
 				  
+				  <br/>
+				  
+				  <p>
+				  Si un script ne peut pas être complètement écrit par un algorithme d'intelligence artificielle, de telles méthodes peuvent quand même être utilisées pour orienter l'élaboration du scénario, des scènes, de sa durée, ect. C'est ce que fait actuellement Netflix <a href="ref_3">[3]</a>, le diffuseur et producteur américain de séries. Netflix récolte, via son service de streaming, une grande quantité de données sur chaque utilisateur :				  
+				  </p>
+				  <ul>
+				  <li>- Quels films et quelles séries sont regardées par l'utilisateur ?</li>
+				  <li>- Quels passages décide-t-il de ne pas regarder ?</li>
+				  <li>- Quels passage regarde-t-il plusieurs fois ?</li>
+				  <li>- Enchaîne-t-il plusieurs épisodes d'une même série ? Combien ?</li>
+				  <li>- Regarde-t-il le générique ?</li>
+				  <li>- Quand fait-il pause ? Au bout de combien de temps relance-t-il la lecture ?</li>
+				  <li>...</li>
+				  </ul>
+				  <p>
+				  Toutes ces informations sont ensuite analysées par Netflix et utilisées pour entraîner des algorithmes d'intelligence artificielle, comme par exemple leur système de recommandation personnalisée de films et de séries. Ce dernier permet de déduire les goût de chaque utilisateurs. Si de nombreux utilisateurs sont susceptibles d'aimer un certain type de film ou de série (styles, durée, nombre d'épisodes, lieu, acteurs, ...), alors Netflix sera plus enclin à produire un film ou une série de ce type. Les productions sont donc déjà grandement influencées par les résultats d'algorithmes d'intelligence artificielle.
+				  </p>
+				  
+				  
+				  <br/>
+				  
+				  <p>
+				  En 2018, le constructeur automobile Lexus a travaillé en collaboration avec <a href="https://www.ibm.com/fr-fr">IBM</a> et <a href="http://www.visualvoiceglobal.com/">Visual Voice</a> pour réaliser un spot publicitaire. La particularité de ce dernier est que son script a été entièrement écrit par un algorithme d'intelligence artificielle <a href="ref_2">[2]</a>. Pour celà, les spots publicitaires automobiles de ces 15 dernière années ayant reçu une récompense ont été analysé. Le but était de comprendre quelle émotion provoquait chaque plan, pour en déduire les schémas qui permettent d'obtenir un bon spot publicitaire automobile. Il a ensuite été possible, après apprentissage de ces schémas, de générer un script pour le spot publicitaire du nouveau modèle de la marque. Le spot est visible <a href="https://www.youtube.com/watch?v=-iaBJ5rqOdg">ici</a>.
+				  </p>
+				  <blockquote>
+				  "En discutant, l’idée est venue de collecter des données, et de soumettre une partie de l’inspiration et du processus à une intelligence artificielle" - Dave Bedwood
+				  </blockquote>
+				  
+				  <p>
+				  L'intelligence artificielle n'est peut-être pas encore capable de générer un script cohérent pour un film d'animation, et cela pose aussi quelques questions éthiques, comme celle de la diversité des contenus et de la liberté artistique. Cependant, comme le souligne la citation précédente, l'intelligence artificielle sera certainement utilisée comme source d'inspiration et d'exploration.
+				  </p>
+					
 			</div>
 		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		<section class="section">
 			<div class="container refs">
@@ -132,6 +300,9 @@
 					</li>
 					<li>[2] : Los Angeles Times -
 						<a id="ref_2"  href="https://www.latimes.com/business/hollywood/la-fi-ct-machine-learning-hollywood-20190411-story.html">Can a computer write a script? Machine learning goes Hollywood</a>
+					</li>
+					<li>[3] : Salon -
+						<a id="ref_3"  href="https://www.salon.com/test/2013/02/01/how_netflix_is_turning_viewers_into_puppets/">How Netflix is turning viewers into puppets</a>
 					</li>
 				</ul>
 			</div>

@@ -37,7 +37,7 @@ a
 	text-align:justify;
 }
 
-ol
+ol,ul
 {
 	margin-left:5%;
 	margin-top:10px;
@@ -136,7 +136,7 @@ nav
 }
 
 
-	.point
+.point
 {	
 	position: relative;
 	display: inline-block;
@@ -168,6 +168,12 @@ nav
 {
 	color:rgb(240,240,240);
 }
+
+.point:hover .tooltiptext
+{
+	left: 6vw;
+}
+	
 
 #footer_center
 {
