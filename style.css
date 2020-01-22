@@ -57,6 +57,7 @@ blockquote
 	background-color:rgb(248, 248, 248);
 }
 
+
 #burger_menu_full
 {
 	position:fixed;
@@ -81,7 +82,7 @@ blockquote
 
 .left_menu
 {
-	width:4vw;
+	width:100vw;
 	height:100vh;
 	background-color:rgb(40, 40, 40);
 	position: fixed;
@@ -89,8 +90,8 @@ blockquote
 	top : 0px;
 	
 	display: flex;
-	flex-direction:column;
-	justify-content:space-between;
+	flex-direction:row;
+	justify-content:space-around;
 	align-items:center;
 	
 	z-index:3;
@@ -105,8 +106,8 @@ blockquote
 	font-family: 'Kaushan Script', cursive;
 	text-shadow: 2px 2px 4px black;
 	color : rgb(240,240,240);
-	font-size:1.5vw;
-	margin-top:10px;
+	font-size:10vw;
+	margin-left:10px;
 	
 	transform:rotate(0deg);
 	
@@ -115,14 +116,13 @@ blockquote
 
 #to_home:hover
 {
-	font-size:1.8vw;
+	font-size:11vw;
 	
 	transform:rotate(-10deg);
 	margin-top:5px;
 	
 	transition:all 0.3s ease;
 }
-
 
 
 nav
@@ -135,7 +135,8 @@ nav
 	align-items:center;
 }
 
-.point
+
+	.point
 {	
 	position: relative;
 	display: inline-block;
@@ -145,7 +146,7 @@ nav
 
 .point .tooltiptext
 {
-	visibility: hidden;
+	visibility: visible;
 	background-color: rgb(40, 40, 40);
 	text-align: center;
 	padding: 5px 0;
@@ -157,22 +158,15 @@ nav
 	position: absolute;
 	z-index: 5;
 	top: -5px;
-    left: 4vw;
+	left: 4vw;
 	
-	opacity:0%;
+	opacity:100%;
 	transition: all 0.3s ease;
 }
 
 .point a
 {
 	color:rgb(240,240,240);
-}
-
-.point:hover .tooltiptext
-{
-	visibility:visible;
-	opacity:100%;
-	transition: all 0.3s ease;
 }
 
 #footer_center
@@ -185,4 +179,7 @@ nav
 	justify-content:space-between;
 	align-items:center;
 }
+
+
+
 
