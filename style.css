@@ -1,6 +1,6 @@
 #header
 {
-	background-image: url(banner_blurred.png) ;
+	background-image: url(banners/banner_blurred.png) ;
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;
@@ -86,7 +86,7 @@ blockquote
 	height:100vh;
 	background-color:rgb(40, 40, 40);
 	position: fixed;
-	left : 0vw;
+	left : -100vw;
 	top : 0px;
 	
 	display: flex;
@@ -171,7 +171,7 @@ nav
 
 .point:hover .tooltiptext
 {
-	left: 6vw;
+	padding-left: 2vw;
 }
 	
 

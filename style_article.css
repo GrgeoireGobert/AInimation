@@ -88,7 +88,7 @@ blockquote
 	height:100vh;
 	background-color:rgb(40, 40, 40);
 	position: fixed;
-	left : 0vw;
+	left : -100vw;
 	top : 0px;
 	
 	display: flex;
@@ -174,7 +174,7 @@ nav
 
 .point:hover .tooltiptext
 {
-	left: 6vw;
+	padding-left: 2vw;
 }
 
 .image
@@ -192,6 +192,7 @@ nav
 {
 	margin-top:1em;
 	font-style : italic;
+	text-align:center;
 }
 
 .refs

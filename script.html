@@ -12,7 +12,7 @@
   <body>
   
   
-  <section id="article_hero"  class="hero is-medium is-primary" style="background-image: url(banner_script.png);">
+  <section id="article_hero"  class="hero is-medium is-primary" style="background-image: url(banners/banner_script.png);">
   <div class="hero-body">
     <div class="columns">
 	<div class="column is-2"></div>
@@ -93,7 +93,7 @@
 				  </h2>
 				  
 					<p>
-					Chaque film d'animation naît d'un scénario, qu'il va ensuite falloir transcrire en images, en dialogues et en musique. Le script est un document écrit qui a contient tous les éléments nécessaire à l'élaboration de chaque plan : décor, mouvement des personnages, dialogues, musiques, indications techniques, etc. Voici un extrait du script du film "Toys Story" du studio Pixar en 1995 (issu de <a href="http://www.dailyscript.com/">DailyScript</a>):
+					Chaque film d'animation naît d'un scénario, qu'il va ensuite falloir transcrire en images, en dialogues et en musique. Le script est un document écrit qui contient tous les éléments nécessaire à l'élaboration de chaque plan : décor, mouvements des personnages, dialogues, musiques, indications techniques, etc. Voici un extrait du script du film "Toy Story" du studio Pixar en 1995 (issu de <a href="http://www.dailyscript.com/">DailyScript</a>):
 					</p>
 					
 					<blockquote>
@@ -159,7 +159,7 @@
 					Des chercheurs des laboratoires de Disney <a href="#ref_1">[1]</a> ont mis au point un outil, basé sur des méthodes d'intelligence artificielle, afin d'analyser le comportement de spectateurs devant un film d'animation et d'en déduire une note moyenne pour le film, comme celles disponibles sur des sites comme <a href="http://www.allocine.fr/">Allociné</a> ou <a href="https://www.rottentomatoes.com/">RottenTomatoes</a>. Un tel outil présente au moins deux utilités principales :
 					<ol>
 					<li>Pouvoir prédire si un nouveau film va plaire, en analysant le comportement d'un panel de spectateurs, et ajuster la promotion en conséquence.</li>
-					<li>Déterminer, sur d'anciens films d'animation, les éléments qui ont fait leur succés et les utiliser pour élaborer le script des films suivants.</li>
+					<li>Déterminer, sur d'anciens films d'animation, les éléments qui ont fait leur succès et les utiliser pour élaborer le script des films suivants.</li>
 					</ol>
 					</p>
 					
@@ -169,11 +169,11 @@
 					<p>
 					Les principales étapes de la méthode mise au point par les chercheurs sont les suivantes :
 					<ol>
-					<li>Toud d'abord, utiliser une caméra et isoler les différents spectateurs.</li>
+					<li>Tout d'abord, utiliser une caméra et isoler les différents spectateurs.</li>
 					<li>Ensuite, capter le mouvement de chacun des spectateurs.</li>
 					<li>En déduire une mesure de caractéristique de leur comportement au cours du temps</li>
-					<li>Corréler le comportement d'un individu avec celui de l'ensembles des spectateurs</li>
-					<li>Utiliser ces mesures pour entrainement un algorithme d'intelligence artificielles capable de prédire la note du film.</li>
+					<li>Corréler le comportement d'un individu avec celui de l'ensemble des spectateurs</li>
+					<li>Utiliser ces mesures pour entraîner un algorithme d'intelligence artificielle capable de prédire la note du film.</li>
 					<li>Utiliser ces mesures pour analyser les moments clés du film.</li>
 					</ol>
 					</p>
@@ -199,12 +199,12 @@
 					<br/>
 					
 					<p>
-					Une fois que toutes ces caractéristiques ont été extraites, elles vont être utilisées pour entrainer et tester un algorithme d'intelligence artificielles. Les strutures employées par les chercheurs sont des réseaux de neurones linéaires et des SVM. Le jeu de données a été réalisé en choisissant, sur le site <a href="https://www.rottentomatoes.com/">RottenTomatoes</a>, 10 films d'animations aux notes variées, en les projetant 3 fois chacun, puis en filmant et analysant le comportement des spectateurs lors de chacune des projection. Les données d'entrée sont donc les évolutions temporelles de l'entropie de chacun et leur corrélation, et les labels souhaités sont les notes des films sur le site utilisé.
+					Une fois que toutes ces caractéristiques ont été extraites, elles vont être utilisées pour entrainer et tester un algorithme d'intelligence artificielle. Les strutures employées par les chercheurs sont des réseaux de neurones linéaires et des SVM. Le jeu de données a été réalisé en choisissant, sur le site <a href="https://www.rottentomatoes.com/">RottenTomatoes</a>, 10 films d'animation aux notes variées, en les projetant 3 fois chacun, puis en filmant et analysant le comportement des spectateurs lors de chacune des projection. Les données d'entrée sont donc les évolutions temporelles de l'entropie de chacun et leur corrélation, et les labels souhaités sont les notes des films sur le site utilisé.
 					</p>
 					
 					<figure class="image" style="width:100%;">
 						<img src="images/analyse_comp_modeles.png" width="100%"></img>
-						<p>Les structures des modèles réalisée : (à gauche) un modèle basé sur le comportement individuel et (à droite) un modèle basé sur la corrélation entre les comportements de chacun.</p>
+						<p>Les structures des modèles réalisés : (à gauche) un modèle basé sur le comportement individuel et (à droite) un modèle basé sur la corrélation entre les comportements de chacun.</p>
 					</figure>
 					
 					<br/>
@@ -241,7 +241,7 @@
 				  </h2>
 				  
 				  <p>
-				  Un algorithme d'intelligence artificielle serait-il capable d'écrire script parfait d'un film d'animation ? Peut-être pas encore, mais de grands pas dans cette direction ont déjà été faits.
+				  Un algorithme d'intelligence artificielle serait-il capable d'écrire le script parfait d'un film d'animation ? Peut-être pas encore, mais de grands pas dans cette direction ont déjà été faits.
 				  </p>
 				  
 				  <br/>
@@ -250,23 +250,23 @@
 				  Si un script ne peut pas être complètement écrit par un algorithme d'intelligence artificielle, de telles méthodes peuvent quand même être utilisées pour orienter l'élaboration du scénario, des scènes, de sa durée, ect. C'est ce que fait actuellement Netflix <a href="ref_3">[3]</a>, le diffuseur et producteur américain de séries. Netflix récolte, via son service de streaming, une grande quantité de données sur chaque utilisateur :				  
 				  </p>
 				  <ul>
-				  <li>- Quels films et quelles séries sont regardées par l'utilisateur ?</li>
+				  <li>- Quels films et quelles séries sont regardés par l'utilisateur ?</li>
 				  <li>- Quels passages décide-t-il de ne pas regarder ?</li>
-				  <li>- Quels passage regarde-t-il plusieurs fois ?</li>
+				  <li>- Quels passages regarde-t-il plusieurs fois ?</li>
 				  <li>- Enchaîne-t-il plusieurs épisodes d'une même série ? Combien ?</li>
 				  <li>- Regarde-t-il le générique ?</li>
 				  <li>- Quand fait-il pause ? Au bout de combien de temps relance-t-il la lecture ?</li>
 				  <li>...</li>
 				  </ul>
 				  <p>
-				  Toutes ces informations sont ensuite analysées par Netflix et utilisées pour entraîner des algorithmes d'intelligence artificielle, comme par exemple leur système de recommandation personnalisée de films et de séries. Ce dernier permet de déduire les goût de chaque utilisateurs. Si de nombreux utilisateurs sont susceptibles d'aimer un certain type de film ou de série (styles, durée, nombre d'épisodes, lieu, acteurs, ...), alors Netflix sera plus enclin à produire un film ou une série de ce type. Les productions sont donc déjà grandement influencées par les résultats d'algorithmes d'intelligence artificielle.
+				  Toutes ces informations sont ensuite analysées par Netflix et utilisées pour entraîner des algorithmes d'intelligence artificielle, comme par exemple leur système de recommandation personnalisée de films et de séries. Ce dernier permet de déduire les goûts de chaque utilisateurs. Si de nombreux utilisateurs sont susceptibles d'aimer un certain type de film ou de série (styles, durée, nombre d'épisodes, lieu, acteurs, ...), alors Netflix sera plus enclin à produire un film ou une série de ce type. Les productions sont donc déjà grandement influencées par les résultats d'algorithmes d'intelligence artificielle.
 				  </p>
 				  
 				  
 				  <br/>
 				  
 				  <p>
-				  En 2018, le constructeur automobile Lexus a travaillé en collaboration avec <a href="https://www.ibm.com/fr-fr">IBM</a> et <a href="http://www.visualvoiceglobal.com/">Visual Voice</a> pour réaliser un spot publicitaire. La particularité de ce dernier est que son script a été entièrement écrit par un algorithme d'intelligence artificielle <a href="ref_2">[2]</a>. Pour celà, les spots publicitaires automobiles de ces 15 dernière années ayant reçu une récompense ont été analysé. Le but était de comprendre quelle émotion provoquait chaque plan, pour en déduire les schémas qui permettent d'obtenir un bon spot publicitaire automobile. Il a ensuite été possible, après apprentissage de ces schémas, de générer un script pour le spot publicitaire du nouveau modèle de la marque. Le spot est visible <a href="https://www.youtube.com/watch?v=-iaBJ5rqOdg">ici</a>.
+				  En 2018, le constructeur automobile Lexus a travaillé en collaboration avec <a href="https://www.ibm.com/fr-fr">IBM</a> et <a href="http://www.visualvoiceglobal.com/">Visual Voice</a> pour réaliser un spot publicitaire. La particularité de ce dernier est que son script a été entièrement écrit par un algorithme d'intelligence artificielle <a href="ref_2">[2]</a>. Pour celà, les spots publicitaires automobiles de ces 15 dernière années ayant reçu une récompense ont été analysé. Le but était de comprendre quelles émotions provoquait chaque plan, pour en déduire les schémas qui permettent d'obtenir un bon spot publicitaire automobile. Il a ensuite été possible, après apprentissage de ces schémas, de générer un script pour le spot publicitaire du nouveau modèle de la marque. Le spot est visible <a href="https://www.youtube.com/watch?v=-iaBJ5rqOdg">ici</a>.
 				  </p>
 				  <blockquote>
 				  "En discutant, l’idée est venue de collecter des données, et de soumettre une partie de l’inspiration et du processus à une intelligence artificielle" - Dave Bedwood
