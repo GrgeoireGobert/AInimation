@@ -165,8 +165,103 @@
 				  </figure>
 				  
 				  
+				  <p>
+				  Comme le montre la figure précédente, les résultats sont bons mais sont encore loins de la qualité d'une modélisation faite par un artiste formé pour cela. Les méthodes ultérieures mèneront certainement progressivement à un outil utilisable en studio d'animation.
+				  </p>
+				  
 			</div>
 		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<section class="section">
+			<div class="container">
+			  <h1 class="title">Génération de terrains</h1>
+				  <h2 class="subtitle">
+					Du schéma au terrain 3D détaillé<br/>
+				  </h2>
+				  
+				  <p>
+				  Un groupe de chercheurs <a href="#ref_2">[2]</a> a récemment mis au point la première intelligence artificielle capable de générer un terrain 3D (distribution d'altitudes) à partir d'un simple schéma. Pour cela, ils ont entrainé 4 GAN (la même architecture <em>générateur/discriminateur</em> que pour la méthode précédente), chacun étant dédié à une tâche particulière :
+				  </p>
+				  <ol>
+					<li>Un GAN générant un terrain à partir d'un schéma 2D.</li>
+					<li>Un GAN Générant un terrain à partir d'une image de courbes de niveau.</li>
+					<li>Un GAN générant un terrain à partir d'un autre terrain partiellement effacé.</li>
+					<li>Un GAN générant un terrain errodé (pseudo-simulation du phénomène d'érosion) à partir d'un terrain.</li>
+				  </ol>
+				  
+				  <p>
+				  Ainsi, les possibilités de création pour l'artiste sont diverses. Il peut partir d'un schéma, ajouter des indications d'altitudes, puis retirer certaines parties du terrain, et enfin l'éroder pour obtenir un résultat plus naturel, le tout en temps réel grâce à la "simplicité" des modèles.
+				  </p>
+				  
+				  <figure class="image" style="width:90%;">
+					<img src="images/Terrain_GAN_full_model.png" width="100%"></img>
+					<p>(A gauche) La phase de création de la base d'apprentissage puis d'apprentissage de chaque GAN. (Au centre) La phase d'utilisation itérative des différents GAN pour la génération d'un terrain. (A droite) Le résultats final, après passage dans un algorithme de super-résolution pour l'ajout de détails (<a href="https://hal.archives-ouvertes.fr/hal-01583706/file/tog.pdf">source</a>)</p>
+				  </figure>
+				  
+				  <p>
+				  L'architecture utilisée pour le générateur de chaque GAN est un encodeur-décodeur. L'encodeur est un réseau de neurones convolutionnels (réduction de la taille des données entre chaque couche) et le décodeur est un réseau de neurones déconvolutionnels (augmentation de la taille des données entre chaque couche). Aucun détail n'est donné à propos du discriminateur, mais son architecture doit permettre de prendre en entrée un terrain et de fournir en sortie un nombre réel (une probabilité en 0 et 1). Ce dernier décompose le terrain d'entrée en plusieurs morceaux et estime, pour chacun des morceaux de terrain, si celui-ci est réel ou issu du générateur. Puis son choix final est une moyenne des choix pour chaque morceau.<br/><br/>
+				  </p>
+				  
+				  <p>
+				  Une des difficultés rencontrée par les chercheurs a été l'élaboration du jeu d'apprentissage. Ils ne pouvaient en effet pas demander à des artistes de générer des schémas et des terrains associés. Ils ont donc utilisé de vrais terrains (issus de mesures sur Terre) et ont généré le schéma associé à chacun de ces terrains en :
+				  </p>
+				  <ul>
+					<li>- Simulant l'écoulement d'eau pour détecter les rivirèes</li>
+					<li>- Simulant l'écoulement d'eau sur le terrain renversé pour détecter les crêtes</li>
+					<li>- Utilisant les données pour générer les courbes de niveau</li>
+				  </ul>
+				  
+				  <p>
+				  Après environ 6 heures d'entraînement pour chacun des GAN, il est possible de générer facilement des terrains très réalistes, comme le montre la vidéo suivante :
+				  </p>
+				  
+				  <figure class="image" style="width:80%;">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/5w685udM838?start=85" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<p>Session de génération de terrain en temps réel, à partir d'un simple schéma.</p>
+				</figure>
+				
+				<p>
+				Certainement plus attirante pour le domaine du jeu-vidéo, où la génération de terrains réalistes est importante, cette technique peut aussi être employée dans le secteur du cinéma d'animation car les larges plans en extérieur ne sont pas rares, et le gain de temps possible avec cette méthode est considérable.
+				</p>
+				  
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		<section class="section">
 			<div class="container refs">

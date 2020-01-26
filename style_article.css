@@ -207,6 +207,8 @@ nav
 	border-top:1px solid black;
 	font-size:1em;
 	padding-top:20px;
+	padding-left:30px;
+	padding-right:30px;
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
