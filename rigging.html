@@ -12,7 +12,7 @@
   <body>
   
   
-  <section id="article_hero"  class="hero is-medium is-primary" style="background-image: url(banner_script.png);">
+  <section id="article_hero"  class="hero is-medium is-primary" style="background-image: url(banners/rigging_banner_full.jpg);">
   <div class="hero-body">
     <div class="columns">
 	<div class="column is-2"></div>
@@ -21,7 +21,7 @@
         Rigging
       </h1>
       <h2 class="subtitle">
-        Definition du rigging
+        Et les personnages prennent vie !
       </h2>
 	</div>
 	<div class="column is-2"></div>
@@ -85,53 +85,179 @@
 	<div class="columns">
 	  <div class="column is-2"></div>
 	  <div class="column is-8">
-		<section class="section ">
+		<section class="section">
 			<div class="container">
-			  <h1 class="title">Section</h1>
+			  <h1 class="title">Le rigging, qu'est ce que c'est ?</h1>
 				  <h2 class="subtitle">
-					A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+					<!-- Rien pour l'instant --></br>
 				  </h2>
 				  
-				  <p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor arcu nec quam pellentesque, et pretium tellus aliquam. Suspendisse id est quis elit venenatis auctor. Suspendisse potenti. Curabitur cursus mattis magna. Mauris in maximus orci. Nam fringilla nibh quis tortor dictum condimentum. Praesent quam sapien, lobortis vitae convallis nec, egestas eget lacus. Vestibulum dapibus magna id tellus ultrices ullamcorper.
-				</p>
-				<p>
-				Etiam pharetra tristique elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem nulla, ullamcorper sit amet ultrices mattis, molestie vitae ipsum. In aliquet vulputate ipsum quis rutrum. Morbi imperdiet nunc vel luctus varius. Sed et rutrum enim, et dictum dui. Pellentesque posuere commodo quam, vel fermentum enim pellentesque id. Phasellus condimentum nisi eget tellus suscipit scelerisque. Suspendisse potenti. Donec sed sagittis dolor. Duis quis volutpat diam, quis mollis purus. Mauris lacus libero, rhoncus quis convallis et, mattis quis odio. Fusce diam risus, finibus et ipsum vel, tempus aliquet mi. Nulla quis quam eleifend, auctor elit quis, bibendum purus. Sed ac mi quam. Morbi gravida, arcu at luctus tempus, velit nulla gravida ex, id lacinia nibh nibh at justo.
-				</p>
-				
-				<figure class="image" style="width:35%;">
-					<img src="miles.jpg" width="100%"></img>
-					<p>Une image est toujours accompagnée d'une légende avec des sources</p>
-				</figure>
-				
-				<p>
-				Suspendisse ut mauris eget mi tempor accumsan non sit amet neque. Maecenas eget convallis nunc. Integer rhoncus nunc non risus faucibus fringilla. Nulla in nunc erat. Nunc ac ligula ut sapien lobortis bibendum ut non nisl. Nullam vel tortor sed tortor pulvinar egestas eget sed massa. Etiam ultrices scelerisque gravida. Vivamus vel sollicitudin metus. Donec tincidunt condimentum luctus. Suspendisse porta blandit odio, id consequat diam fermentum a. Sed congue magna ac semper bibendum.
-				</p>
-				<p>
-				Aliquam fermentum cursus aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ac dignissim lorem. Aliquam vel luctus velit. Fusce placerat, dui sit amet interdum eleifend, augue nibh placerat eros, elementum vestibulum nunc arcu sit amet lorem. Quisque faucibus ante a quam pellentesque, a elementum felis condimentum. Ut posuere consectetur massa sed lobortis. Nullam porta leo a lectus euismod tempor. Etiam rutrum egestas felis, eget tincidunt urna fermentum nec. Suspendisse semper molestie efficitur. Quisque finibus cursus leo, nec ornare nisi. Maecenas eu lectus at lectus vehicula aliquet.
-				</p>
-				
-				<figure class="image" style="width:50%;">
-					<iframe width="100%"  height="350" src="https://www.youtube.com/embed/h_HAVnDCfkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<p>Une vidéo est toujours accompagnée d'une légende avec des sources</p>
-				</figure>
-				
-				<p>
-				Sed a porta quam. Pellentesque ac eleifend magna. Sed nec sem sem. Vestibulum euismod porta est, at cursus nisi rutrum at. Morbi tincidunt sapien a est efficitur efficitur. Aliquam sed erat quam. Phasellus vel neque a ex efficitur dictum. Fusce ac efficitur risus. Praesent eu ipsum ac lorem semper varius. Suspendisse elementum orci vel tellus fringilla consequat.
-				</p>
+				    <p>
+					Les objets issus de la modélisation, et en particulier les personnages, présentent le défaut d'être statiques. En effet, les personnages sont modélisés par l'artiste dans une certaine pose (souvent les bras en forme de "T"), mais ces derniers doivent pouvoir adopter une infinité de poses différentes dans le but de produire un certain mouvement (marcher, courir, sauter, froncer les sourcils, rire, etc.). Les méthodes de rigging permettent aux artistes, via la manipulation d'une structure simple, de déformer le maillage d'un personnage et ainsi de lui faire prendre vie. Parmi ces structures simples, il existe notamment le squelette virtuel, la cage de déformation, mais aussi le <em>motion capture</em>. Il est nécessaire, lorsque ces structures sont manipulées, d'induire la déformation du maillage adéquate. Cette transformation (structure simple vers maillage) présente souvent certains défauts, auxquels l'intelligence artificielle pourrait fournir des solutions.<br/><br/>
+					</p>
+					
+					<p>
+					Dans le secteur du cinéma d'animation et celui du jeu-vidéo, la technique de <a href="https://fr.wikipedia.org/wiki/Capture_de_mouvement"><em>motion capture</em></a> est souvent utilisée. Celle-ci consiste à placer de multiples capteurs sur un acteur afin d'accéder précisément aux positions et aux orientations de plusieurs parties de son corps pendant sa performance. Cela permet d'obtenir des animations naturelles et réalistes.<br/>
+					Cependant, cette méthode présente deux inconvénients principaux. Le premier est la difficulté d'adapter les données à la morphologie du personnage à animer, celle-ci étant souvent éloignée de la morphologie de l'acteur. Le second est la présence de bruit et d'incertitudes dans les mesures qu'il est difficile de différencier des détails corrects.<br/>
+					Deux méthodes basées sur l'intelligence artificielle vont ainsi être présentées :
+					</p>
+					<ol>
+						<li>Une méthode visant à adapter le <em>rig</em> d'un personnage à un autre personnage de morphologie différente.</li>
+						<li>Une méthode de débruitage intelligent adaptée au rigging.</li>
+					</ol>
 				  
 			</div>
 		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<section class="section">
+			<div class="container">
+			  <h1 class="title">D'un personnage à un autre</h1>
+				  <h2 class="subtitle">
+					Une seule capture pour plusieurs animations</br>
+				  </h2>
+				  
+				    <p>
+					Des chercheurs de chez Disney <a href="#ref_1">[1]</a> ont mis au point, il y a quelques années, une méthode probabiliste afin de transcrire les poses (issues de <em>motion capture</em>) d'un personnage A en poses pour un personnage B. Les paramètres de ce modèle probabiliste sont appris grâce à un ensemble de paires de poses (A,B) correspondantes. Afin de pallier les différences de morphologie, un post-traitement visant à gérer l'aspect dynamique du mouvement et les collisions a été développé.
+					</p>
+					
+					<figure class="image" style="width:70%;">
+						<img src="images/Rig_to_rig_model_full.png" width="100%"></img>
+						<p>La structure générale de la méthode de transfert de poses (<a href="https://www.twittertechnews.com/wp-content/uploads/2015/11/Animating-Non-Humanoid-Characters-with-Human-Motion-Data-Paper.pdf">source</a>). Les correspondances entre un ensemble de poses permettent de définir un modèle optimal, qui est utilisé pour transformer des données de motion capture. Vient ensuite une phase d'optimisation dynamique du mouvement.</p>
+					</figure>
+					
+					<p>
+					La structure permettant de transcrire des données de <em>motion capture</em> adaptées à un personnage A en des données adaptées à un personnage B s'appuie sur des <a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le_de_m%C3%A9lange_gaussien">modèles de mélange gaussiens</a>. L'idée est de passer par un espace latent commun aux deux personnages. Un premier modèle de mélange gaussien permet de passer des poses du personnage A à l'espace latent. Un second modèle de mélange gaussien permet de passer des poses du personnage B à l'espace latent. Même si certains hyperparamètres (comme la dimension de l'espace latent, le nombre de gaussiennes mélangées, etc.) sont fixés a priori, d'autres paramètres (comme la moyenne et l'écart type dans chaque direction de chaque gaussienne) sont obtenus par optimisation de manière à ce que, pour une paire de poses (A,B) correspondantes, les deux modèles mènent au même point dans l'espace latent.<br/>
+					Une fois les modèles optimaux appris, il ne reste plus qu'à les utiliser avec une nouvelle pose A en entrée pour obtenir le point correspondant dans l'espace latent puis trouver la pose B associée à ce point.
+					</p>
+					
+					
+					<figure class="image" style="width:70%;">
+						<img src="images/Rig_to_rig_mapping_model.png" width="100%"></img>
+						<p>L'apprentissage et l'utilisation des modèles probabilistes (<a href="https://www.twittertechnews.com/wp-content/uploads/2015/11/Animating-Non-Humanoid-Characters-with-Human-Motion-Data-Paper.pdf">source</a>)</p>
+					</figure>
+					
+					<p>
+					Enfin, vient l'étape d'optimisation dynamique du mouvement. Cette étape n'est pas basée sur des algorithmes d'intelligence artificielle. Il s'agit d'utiliser les équations fondamentales de la mécaniques ainsi que de détecter les collisions (avec le sol ou internes au personnage) afin d'affiner l'animation et de la rendre plus réaliste. La vidéo suivante présente quelques résultats. 
+					</p>
+					
+					<figure class="image" style="width:80%;">
+						<iframe width="100%" height="400" src="https://www.youtube.com/embed/h_HAVnDCfkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<p>Quelques résultats obtenu en transfert de rig.</p>
+					</figure>
+					
+					<p>
+					La technique, mise au point il y a quelques années en utilisant des modèles probabilistes, autorise l'utilisation de <em>motion capture</em> afin d'obtenir rapidement des animations adaptées à la morphologie non-humanoïde d'un personnage. Pour cela, l'artiste n'a qu'à fournir un jeu de paires de poses clés correspondantes, ce qui est bien plus rapide qu'une animation classique "à la main". Les performances obtenues avec les réseaux de neurones aujourd'hui pourraient fournir des résultats encore plus probants.
+					</p>
+									  
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<section class="section">
+			<div class="container">
+			  <h1 class="title">Débruitage intelligent</h1>
+				  <h2 class="subtitle">
+					Distinguer le détail au milieu du bruit</br>
+				  </h2>
+				  
+				    <p>
+					Les données issues d'une séance de <em>motion capture</em> sont souvent bruitées. Les techniques classiques de débruitage, comme le filtrage fréquentiel ou l'analyse en composantes principales, ne permettent pas de distinguer le bruit indésirable du détail désiré. C'est pourquoi des chercheurs du studio de jeu-vidéo Ubisoft <a href="#ref_2">[2]</a> ont entraîné un réseau de neurones afin de réaliser cette opération de débruitage.<br/>
+					Comme souvent, une part importante du travail se situe dans les phases de pré-traitement et de post-traitement des données, afin d'obtenir le résultat souhaité.<br/><br/>
+					</p>
+					
+					<p>
+					Les chercheurs ont utilisé une base de données de <em>motion capture</em> publique. L'objectif est de fournir, en entrée du réseau de neurones, une "pose" de <em>motion capture</em> bruitée et d'obtenir en sortie la pose voulue du personnage. Les données de la base de données étant variées (morphologies d'acteurs, nombre de marqueurs, position des marqueurs, etc.), l'étape de pré-traitement consiste à :
+					</p>
+					<ol>
+						<li>Réaliser une mise à l'échelle en hauteur afin de normaliser la taille de l'acteur.</li>
+						<li>Trouver une repère de référence commun aux différentes poses.</li>
+						<li>Exprimer, en partant de la pose cible du personnage, la position d'un certain nombre de marqueurs virtuels dans l'espece de référence précédent.</li>
+						<li>Récupérer les données statistiques (moyenne, écart-type) des marqueurs à partir des données de <em>motion capture</em> de la séquence.</li>
+						<li>Générer, à partir de ces statistiques, des positions de marqueurs virtuels eronnées, voire même parfois manquantes.</li>
+						<li>Normaliser ces positions, qui seront données en entrée du réseau de neurones.</li>
+					</ol>
+					
+					<p>
+					La structure du réseau de neurones est plutôt simple. Il s'agit d'un empilement de 6 blocs [couche dense / activation ReLU], comme décrit sur la figure suivante.
+					</p>
+					
+					<figure class="image" style="width:20%;">
+						<img src="images/Motion_capture_cleaning_structure.png" width="100%"></img>
+						<p>La structure du réseau de neurones utilisé (<a href="https://montreal.ubisoft.com/wp-content/uploads/2018/05/neuraltracker.pdf">source</a>)</p>
+					</figure>
+					
+					<p>
+					Enfin, une fois que les données d'entrée sont passées dans le réseau, le résultat obtenu en sortie correspond à une pose d'un personnage virtuel (orientation de chacun de ses os). Les étapes suivantes sont alors nécessaires :
+					</p>
+					
+					<ol>
+						<li>Dénormaliser les données afin de retrouver les notions de distance.</li>
+						<li>Réaliser une légère opération de filtrage classique afin d'éviter les oscilations.</li>
+						<li>Faire une opération de reciblage, qui consiste à repositionner les extrémités des membres du personnage à l'endroit souhaité.</li>
+					</ol>
+					
+					<p>
+					Les résultats fournis par les chercheurs sont plutôt bons. En cas de données bruitées ou même de données manquantes, la pose fournie par le réseau de neurones est très proche de la pose obtenue après un nettoyage manuel des données bruitées.
+					</p>
+					
+					<figure class="image" style="width:80%;">
+						<img src="images/Motion_capture_cleaning_results.png" width="100%"></img>
+						<p>Un exemple de résultat obtenu grâce au débruitage intelligent. (A gauche) Données brutes. (Au centre) Pose obtenue par la méthode présentée. (A droite) Pose manuelle (<a href="https://montreal.ubisoft.com/wp-content/uploads/2018/05/neuraltracker.pdf">source</a>)</p>
+					</figure>
+					
+				  
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		<section class="section">
 			<div class="container refs">
 				<h1 class="title">Références</h1>
 				<ul>
 					<li>[1] : DisneyResearch -
-						<a id="ref_1" href="https://studios.disneyresearch.com/2016/03/24/predicting-movie-ratings-from-audience-behaviors/">Predicting Movie Ratings from Audience Behaviors</a>
+						<a id="ref_1" href="https://www.twittertechnews.com/wp-content/uploads/2015/11/Animating-Non-Humanoid-Characters-with-Human-Motion-Data-Paper.pdf">Animating Non-Humanoid Characters with Human Motion Data</a>
 					</li>
-					<li>[2] : Los Angeles Times -
-						<a id="ref_2"  href="https://www.latimes.com/business/hollywood/la-fi-ct-machine-learning-hollywood-20190411-story.html">Can a computer write a script? Machine learning goes Hollywood</a>
+					<li>[2] : Ubisoft -
+						<a id="ref_2"  href="https://montreal.ubisoft.com/wp-content/uploads/2018/05/neuraltracker.pdf">Robust Solving of Optical Motion Capture Data by Denoising</a>
 					</li>
 				</ul>
 			</div>
