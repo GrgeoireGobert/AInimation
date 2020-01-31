@@ -69,10 +69,6 @@
 	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
 	  
 	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
-	  <div class="point"><a href="compositing.html"><i class="far fa-circle"></i><span class="tooltiptext">Compositing</span></a></div>
-	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
-	  
-	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
 	  <div class="point"><a href="son.html"><i class="far fa-circle"></i><span class="tooltiptext">Son</span></a></div>
 	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
 	  
@@ -87,7 +83,7 @@
 	  <div class="column is-8">
 		<section class="section">
 			<div class="container">
-			  <h1 class="title">Le storyboard, qu'est ce que c'est ?</h1>
+			  <h1 class="title">Le storyboard, qu'est-ce que c'est ?</h1>
 				  <h2 class="subtitle">
 					<!-- Rien pour l'instant --></br>
 				  </h2>
@@ -121,11 +117,11 @@
 				  </h2>
 				  
 				<p>
-				Récemment, des chercheurs (<a href="#ref_1">[1]</a> et <a href="https://arxiv.org/abs/1804.03608">papier original</a>) ont mis au point un algorithme d'intelligence artificielle capable de lire un script, scène par scène, et de générer une vidéo en deux dimensions de chaque scène. Pour cela, ils se sont appuyés sur une base de donnée de 25 000 séquences vidéo richement annotées extraites de la série d'animation "The Flinstones". Ils ont ainsi pu mettre au point leur méthode, basée sur 3 structures principales :
+				Récemment, des chercheurs (<a href="#ref_1">[1]</a> et <a href="https://arxiv.org/abs/1804.03608">papier original</a>) ont mis au point un algorithme d'intelligence artificielle capable de lire un script, scène par scène, et de générer une vidéo en deux dimensions de chaque scène. Pour cela, ils se sont appuyés sur une base de données de 25 000 séquences vidéo richement annotées extraites de la série d'animation "The Flinstones". Ils ont ainsi pu mettre au point leur méthode, basée sur 3 structures principales :
 				</p>
 				<ol>
 					<li>Une structure (<em>Background Retriever</em>) qui, prenant en entrée la description d'une scène, détecte l'arrière-plan de la scène et en trouve un correspondant dans la base de données.</li>
-					<li>Une structure (<em>Layout Composer</em>) qui, prenant en entrée la description de la scène, détecte séquentiellement les différents composants de la scène (personnage, objets) et en déduit leur position et leur échelle dans la séquence vidéo produite.</li>
+					<li>Une structure (<em>Layout Composer</em>) qui, prenant en entrée la description de la scène, détecte séquentiellement les différents composants de la scène (personnages, objets) et en déduit leur position et leur échelle dans la séquence vidéo produite.</li>
 					<li>Une structure (<em>Entity Retriever</em>) qui, prenant en entrée la description de la scène et la disposition issue de la structure précédente, trouve les animations adéquates de chacun des constituants au sein de la base de données.</li>
 				</ol>
 				
@@ -157,7 +153,7 @@
 				<p>
 				Une fois que chaque élément est bien positionné par rapport aux autres et est à la bonne échelle, vient l'étape consistant à remplacer chacune des informations abstraites par une animation concrète. Pour cela, il est encore une fois nécessaire d'analyser le sens de la description de la scène, puis de choisir, dans la base de données, la bonne animation pour chacun de ses constituants.<br>
 				Pour l'analyse de la description de la scène, un Bi-LSTM est encore logiquement utilisé.<br/>
-				La séquence d'informations issue du <em>layout composer</em> (informations de position et de taille des constituants dans chacune des images de la séquence vidéo) sont comparées entre-elles, encore une fois pour en faire une analyse sémantique. Par exemple, si un personnage se déplace lentement (il marche), ou rapidement (il court), l'animation finalement choisie ne sera pas la même. Pour réaliser cette analyse sémantique, chacune des images de la séquences passe dans un réseau de neurones convolutionnel (pour les mêmes raisons que précédemment) et les sorties sont utilisées comme entrée d'un Bi-LSTM, pour tenir compte du "contexte" de la séquence d'images.<br/>
+				La séquence d'informations issue du <em>layout composer</em> (informations de position et de taille des constituants dans chacune des images de la séquence vidéo) sont comparées entre-elles, encore une fois pour en faire une analyse sémantique. Par exemple, si un personnage se déplace lentement (il marche), ou rapidement (il court), l'animation finalement choisie ne sera pas la même. Pour réaliser cette analyse sémantique, chacune des images de la séquence passe dans un réseau de neurones convolutionnel (pour les mêmes raisons que précédemment) et les sorties sont utilisées comme entrée d'un Bi-LSTM, pour tenir compte du "contexte" de la séquence d'images.<br/>
 				Parallèlement, une structure analogue réalise les mêmes opérations sur la base de données afin d'obtenir le même type d'informations pour chacune des séquences de la base.<br/>
 				Enfin, les séquences obtenues sont comparées (via un produit scalaire) pour déterminer quelle animation de la base de données serait la plus adaptée à la scène en construction.
 				</p>
@@ -213,7 +209,7 @@
 				  </h2>
 				  
 				<p>
-				Des chercheurs des laboratoire de Disney <a href="#ref_2">[2]</a><a href="#ref_3">[3]</a> ont mis au point une méthode, liant intelligence artificielle et algorithmie classique, afin de générer une animation 3D à partir du script. L'avantage de ce travail par rapport au précédent réside dans le fait qu'il est ici possible de placer la caméra n'importe où dans la scène.<br/>
+				Des chercheurs des laboratoires de Disney <a href="#ref_2">[2]</a><a href="#ref_3">[3]</a> ont mis au point une méthode, liant intelligence artificielle et algorithmie classique, afin de générer une animation 3D à partir du script. L'avantage de ce travail par rapport au précédent réside dans le fait qu'il est ici possible de placer la caméra n'importe où dans la scène.<br/>
 				La méthode se décompose en 3 étapes principales :
 				</p>
 				<ol>
@@ -236,12 +232,12 @@
 				
 				<figure class="image" style="width:60%;">
 					<img src="images/Disney_Generation_FSM.png" width="100%"></img>
-					<p>La machine à états finis utilisés pour l'extraction d'informations utiles, dans le cas d'un script bien formé (<a href="https://studios.disneyresearch.com/2019/06/01/generating-animations-from-screenplays/">source</a>)</p>
+					<p>La machine à états finis utilisée pour l'extraction d'informations utiles, dans le cas d'un script bien formé (<a href="https://studios.disneyresearch.com/2019/06/01/generating-animations-from-screenplays/">source</a>)</p>
 				</figure>
 				
 				<p>
-				La simplificiation et la decomposition des description complexes en un ensemble de descriptions plus simple se fait ensuite en utilisant des règles de structure syntaxiques (constructions passives, phrases apposées, propositions relatives, propositions coordonnées, propositions corrélées et proposition adverbiales). Pour chacune des phrases, la détection et le traitement des 6 cas précédents sont réalisés en utilisant notamment des réseaux de neurones convolutionnel.<br>
-				Suite à cela, le vocabulaire des descriptions simple générées est lui aussi simplifié, en utilisant un dictionnaire de synonymes, afin de prendre en compte la diversité limitée d'objets et d'actions réalisables dans l'animation 3D finalement générée.<br/>
+				La simplificiation et la décomposition des descriptions complexes en un ensemble de descriptions plus simples se fait ensuite en utilisant des règles de structures syntaxiques (constructions passives, phrases apposées, propositions relatives, propositions coordonnées, propositions corrélées et propositions adverbiales). Pour chacune des phrases, la détection et le traitement des 6 cas précédents sont réalisés en utilisant notamment des réseaux de neurones convolutionnels.<br>
+				Suite à cela, le vocabulaire des descriptions simples générées est lui aussi simplifié, en utilisant un dictionnaire de synonymes, afin de prendre en compte la diversité limitée d'objets et d'actions réalisables dans l'animation 3D finalement générée.<br/>
 				Enfin, une analyse sémantique des descriptions textuelles simples est réalisée afin de générer l'action à jouer dans l'animation finale. Pour cela, les chercheurs ont eux-aussi mis au point un Bi-LSTM en faisant du <em>transfer learning</em> à partir du réseau ELMo pré-entrainé.<br/><br/>
 				</p>
 				

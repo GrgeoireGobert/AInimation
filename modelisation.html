@@ -21,7 +21,7 @@
         Modélisation
       </h1>
       <h2 class="subtitle">
-        la sculpture virtuelle
+        La sculpture virtuelle
       </h2>
 	</div>
 	<div class="column is-2"></div>
@@ -69,10 +69,6 @@
 	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
 	  
 	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
-	  <div class="point"><a href="compositing.html"><i class="far fa-circle"></i><span class="tooltiptext">Compositing</span></a></div>
-	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
-	  
-	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
 	  <div class="point"><a href="son.html"><i class="far fa-circle"></i><span class="tooltiptext">Son</span></a></div>
 	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
 	  
@@ -87,7 +83,7 @@
 	  <div class="column is-8">
 		<section class="section">
 			<div class="container">
-			  <h1 class="title">La modélisation, qu'est ce que c'est ?</h1>
+			  <h1 class="title">La modélisation, qu'est-ce que c'est ?</h1>
 				  <h2 class="subtitle">
 					<!-- Rien pour l'instant --></br>
 				  </h2>
@@ -97,7 +93,7 @@
 				</p>
 				
 				<p>
-				Cette étape est donc longue et requiert des compétences de haut niveau. Même si certaines tâches sont redondantes, elles ne peuvent pas être automosatisées facilement car elles dépendant toujours de l'objet à modéliser. Cependant, des algorithmes d'intelligence artificielle capables de générer de volumes voient le jour et pourraient être employés pour au moins assister la phase de modélisation. Deux méthodes, basées sur des GAN, vont être présentées :
+				Cette étape est donc longue et requiert des compétences de haut niveau. Même si certaines tâches sont redondantes, elles ne peuvent pas être automosatisées facilement car elles dépendent toujours de l'objet à modéliser. Cependant, des algorithmes d'intelligence artificielle capables de générer de volumes voient le jour et pourraient être employés pour au moins assister la phase de modélisation. Deux méthodes, basées sur des GAN, vont être présentées :
 				</p>
 				
 				<ol>
@@ -129,8 +125,8 @@
 				  </h2>
 				  
 				  <p>
-				  Des chercheurs <a href="#ref_1">[1]</a> ont mis au point un algorithme d'intellignce artificielle capable, après apprentissage, de générer des objets 3D. Il s'agit du même principe, par exemple, que les méthodes permettant de générer des images de visages humains réalistes, mais étendue à la 3D.<br/>
-				  Pour y parvenir, les chercheur ont utilisé un GAN (<em>Generative Adversarial Networks</em> : réseaux adverses génératifs) dont le principe est le suivant :
+				  Des chercheurs <a href="#ref_1">[1]</a> ont mis au point un algorithme d'intelligence artificielle capable, après apprentissage, de générer des objets 3D. Il s'agit du même principe, par exemple, que les méthodes permettant de générer des images de visages humains réalistes, mais étendue à la 3D.<br/>
+				  Pour y parvenir, les chercheurs ont utilisé un GAN (<em>Generative Adversarial Networks</em> : réseaux adverses génératifs) dont le principe est le suivant :
 				  </p>
 				  
 				  <ul>
@@ -197,7 +193,7 @@
 				  </p>
 				  <ol>
 					<li>Un GAN générant un terrain à partir d'un schéma 2D.</li>
-					<li>Un GAN Générant un terrain à partir d'une image de courbes de niveau.</li>
+					<li>Un GAN générant un terrain à partir d'une image de courbes de niveau.</li>
 					<li>Un GAN générant un terrain à partir d'un autre terrain partiellement effacé.</li>
 					<li>Un GAN générant un terrain errodé (pseudo-simulation du phénomène d'érosion) à partir d'un terrain.</li>
 				  </ol>
@@ -208,7 +204,7 @@
 				  
 				  <figure class="image" style="width:90%;">
 					<img src="images/Terrain_GAN_full_model.png" width="100%"></img>
-					<p>(A gauche) La phase de création de la base d'apprentissage puis d'apprentissage de chaque GAN. (Au centre) La phase d'utilisation itérative des différents GAN pour la génération d'un terrain. (A droite) Le résultats final, après passage dans un algorithme de super-résolution pour l'ajout de détails (<a href="https://hal.archives-ouvertes.fr/hal-01583706/file/tog.pdf">source</a>)</p>
+					<p>(A gauche) La phase de création de la base d'apprentissage puis d'apprentissage de chaque GAN. (Au centre) La phase d'utilisation itérative des différents GAN pour la génération d'un terrain. (A droite) Le résultat final, après passage dans un algorithme de super-résolution pour l'ajout de détails (<a href="https://hal.archives-ouvertes.fr/hal-01583706/file/tog.pdf">source</a>)</p>
 				  </figure>
 				  
 				  <p>
@@ -216,10 +212,10 @@
 				  </p>
 				  
 				  <p>
-				  Une des difficultés rencontrée par les chercheurs a été l'élaboration du jeu d'apprentissage. Ils ne pouvaient en effet pas demander à des artistes de générer des schémas et des terrains associés. Ils ont donc utilisé de vrais terrains (issus de mesures sur Terre) et ont généré le schéma associé à chacun de ces terrains en :
+				  Une des difficultés rencontrées par les chercheurs a été l'élaboration du jeu d'apprentissage. Ils ne pouvaient en effet pas demander à des artistes de générer des schémas et des terrains associés. Ils ont donc utilisé de vrais terrains (issus de mesures sur Terre) et ont généré le schéma associé à chacun de ces terrains en :
 				  </p>
 				  <ul>
-					<li>- Simulant l'écoulement d'eau pour détecter les rivirèes</li>
+					<li>- Simulant l'écoulement d'eau pour détecter les rivières</li>
 					<li>- Simulant l'écoulement d'eau sur le terrain renversé pour détecter les crêtes</li>
 					<li>- Utilisant les données pour générer les courbes de niveau</li>
 				  </ul>

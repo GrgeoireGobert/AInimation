@@ -21,7 +21,7 @@
         Rendu
       </h1>
       <h2 class="subtitle">
-        Definition du rendu
+        A la recherche de la lumière
       </h2>
 	</div>
 	<div class="column is-2"></div>
@@ -69,10 +69,6 @@
 	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
 	  
 	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
-	  <div class="point"><a href="compositing.html"><i class="far fa-circle"></i><span class="tooltiptext">Compositing</span></a></div>
-	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
-	  
-	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
 	  <div class="point"><a href="son.html"><i class="far fa-circle"></i><span class="tooltiptext">Son</span></a></div>
 	  <i class="fas fa-ellipsis-v" style="font-size:0.5em;"></i>
 	  
@@ -85,53 +81,194 @@
 	<div class="columns">
 	  <div class="column is-2"></div>
 	  <div class="column is-8">
-		<section class="section ">
+		<section class="section">
 			<div class="container">
-			  <h1 class="title">Section</h1>
+			  <h1 class="title">Le rendu, qu'est-ce que c'est ?</h1>
 				  <h2 class="subtitle">
-					A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+					<!-- Rien pour l'instant --></br>
 				  </h2>
 				  
-				  <p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor arcu nec quam pellentesque, et pretium tellus aliquam. Suspendisse id est quis elit venenatis auctor. Suspendisse potenti. Curabitur cursus mattis magna. Mauris in maximus orci. Nam fringilla nibh quis tortor dictum condimentum. Praesent quam sapien, lobortis vitae convallis nec, egestas eget lacus. Vestibulum dapibus magna id tellus ultrices ullamcorper.
-				</p>
 				<p>
-				Etiam pharetra tristique elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem nulla, ullamcorper sit amet ultrices mattis, molestie vitae ipsum. In aliquet vulputate ipsum quis rutrum. Morbi imperdiet nunc vel luctus varius. Sed et rutrum enim, et dictum dui. Pellentesque posuere commodo quam, vel fermentum enim pellentesque id. Phasellus condimentum nisi eget tellus suscipit scelerisque. Suspendisse potenti. Donec sed sagittis dolor. Duis quis volutpat diam, quis mollis purus. Mauris lacus libero, rhoncus quis convallis et, mattis quis odio. Fusce diam risus, finibus et ipsum vel, tempus aliquet mi. Nulla quis quam eleifend, auctor elit quis, bibendum purus. Sed ac mi quam. Morbi gravida, arcu at luctus tempus, velit nulla gravida ex, id lacinia nibh nibh at justo.
-				</p>
-				
-				<figure class="image" style="width:35%;">
-					<img src="miles.jpg" width="100%"></img>
-					<p>Une image est toujours accompagnée d'une légende avec des sources</p>
-				</figure>
-				
-				<p>
-				Suspendisse ut mauris eget mi tempor accumsan non sit amet neque. Maecenas eget convallis nunc. Integer rhoncus nunc non risus faucibus fringilla. Nulla in nunc erat. Nunc ac ligula ut sapien lobortis bibendum ut non nisl. Nullam vel tortor sed tortor pulvinar egestas eget sed massa. Etiam ultrices scelerisque gravida. Vivamus vel sollicitudin metus. Donec tincidunt condimentum luctus. Suspendisse porta blandit odio, id consequat diam fermentum a. Sed congue magna ac semper bibendum.
-				</p>
-				<p>
-				Aliquam fermentum cursus aliquam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ac dignissim lorem. Aliquam vel luctus velit. Fusce placerat, dui sit amet interdum eleifend, augue nibh placerat eros, elementum vestibulum nunc arcu sit amet lorem. Quisque faucibus ante a quam pellentesque, a elementum felis condimentum. Ut posuere consectetur massa sed lobortis. Nullam porta leo a lectus euismod tempor. Etiam rutrum egestas felis, eget tincidunt urna fermentum nec. Suspendisse semper molestie efficitur. Quisque finibus cursus leo, nec ornare nisi. Maecenas eu lectus at lectus vehicula aliquet.
+				Les étapes précédentes ont permis de modéliser numériquement les différentes scènes : position et catégorie des sources de lumière, position, orientation et déformation des objets, simulation des phénomènes physiques, etc. Il est alors temps de synthétiser la séquence d'images, prises à un intervalle de temps régulier (au moins 24 images par seconde), pour aboutir à une séquence vidéo. Cette synthèse d'image se fait grâce au <em>Ray Tracing</em> (plus précisément au <a href="https://fr.wikipedia.org/wiki/Path_tracing"><em>Path Tracing</em></a>) qui consiste à lancer dans la scène 3D des rayons partant de la caméra. Ces rayons rebondissent sur les différents objets et acquièrent (lorsqu'ils rencontrent une source d'énergie) ou perdent (lorsqu'ils rencontrent un matériau absorbant) de l'énergie sur leur trajet. La direction de rebond peut dépendre du matériau (par exemple pour un miroir parfait) ou peut être aléatoire (si le but est d'estimer l'illumination globale en un point). Les informations ainsi récoltées permettent de synthétiser une image réaliste, au prix toutefois de nombreuses heures de calcul.
 				</p>
 				
 				<figure class="image" style="width:50%;">
-					<iframe width="100%"  height="350" src="https://www.youtube.com/embed/h_HAVnDCfkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<p>Une vidéo est toujours accompagnée d'une légende avec des sources</p>
+						<img src="images/Rendu_RayTracing_ECL.png" width="100%"></img>
+						<p>Exemple de rendu réaliste simple réalisé à l'Ecole Centrale de Lyon, par la méthode de <em>Path Tracing</em>. La sphère centrale blanche est colorée par les murs environnants grâce au calcul d'illumination globale.</p>
 				</figure>
 				
 				<p>
-				Sed a porta quam. Pellentesque ac eleifend magna. Sed nec sem sem. Vestibulum euismod porta est, at cursus nisi rutrum at. Morbi tincidunt sapien a est efficitur efficitur. Aliquam sed erat quam. Phasellus vel neque a ex efficitur dictum. Fusce ac efficitur risus. Praesent eu ipsum ac lorem semper varius. Suspendisse elementum orci vel tellus fringilla consequat.
+				Comme cela est visible sur l'image précédente, le caractère aléatoire de certains rayons (dû à l'estimation de l'illumination globale par la <a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Monte-Carlo">méthode de Monte Carlo</a>) engendre une image bruitée. Une des parades à ce problème est la réalisation d'une estimation plus précise en lançant plus de rayons. Cependant, pour réduire la quantité de bruit par deux, il est nécessaire de multiplier par quatre le nombre de rayons lancés et donc le temps de calcul. Une autre solution consiste à utiliser l'intelligence artificielle afin de débruiter efficacement l'image obtenue. Cette solution sera présentée par la suite.<br/><br/>
+				</p>
+				
+				<p>
+				Pour certaines productions, les choix artistiques ajoutent des contraintes à l'étape de rendu. C'est par exemple le cas du récent film d'animation <em>Spider-Man: New Generation</em> du studio Sony Pictures Animation, qui préentait un aspect "comics" dans ses rendus. Là encore, l'intelligence artificielle est venue en aide aux artistes afin d'arriver à leurs fins.<br/>
+				Un vaste champ de possibilités artsitiques s'ouvre avec l'arrivée récente du transfert de style 3D, permettant ainsi de se libérer de la contrainte de matériaux physiques (voir la page consacrée au <a href="texturing.html">texturing</a>) au bénéfice de styles plus exotiques.<br/>
+				Ces deux avancées, obtenues grâce à l'intelligence artificielle, seront présentées dans les paragraphes suivants.
+				</p>
+				
+				
+				  
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<section class="section">
+			<div class="container">
+			  <h1 class="title">Le débruitage des rendus</h1>
+				  <h2 class="subtitle">
+					Corriger les erreurs des estimations de Monte Carlo</br>
+				  </h2>
+				  
+				<p>
+				Comme cela a été expliqué en introduction, la synthèse de rendu par <em>Path Tracing</em> génère des résultats physiquement très justes mais bruités, même en lançant un très grand nombre de rayons pour le calcul de chaque pixel, à cause de l'estimation de l'illumination globale par la méthode de Monte Carlo. Ce bruit étant inévitable, une étape de filtrage est nécessaire afin de réduire son impact. La solution classique, visant à remplacer la valeur d'un pixel de l'image par une moyenne pondérée des valeurs de ses voisins, présente un inconvénient majeur : comment choisir les pondérations adaptées alors que la structure du bruit varie d'un endroit à l'autre de l'image (à cause de la non-uniformité de l'illumination globale) ?<br/>
+				Des chercheurs du studio Disney [<a href="#ref_1">1</a>,<a href="#ref_1">2</a>] ont tenté de résoudre ce problème en utilisant des algorithmes d'intelligence artificielle. L'objectif était de mettre au point un réseau de neurones convolutionnel capable de prédire le filtre (aussi appelé "noyau") adapté à chacun des pixels de l'image. Ainsi, l'étape de filtrage peut ensuite devenir "dynamique" dans le sens où la structure locale du bruit est prise en compte.<br/><br/>		
+				</p>
+				
+				<p>
+				L'architecture de la solution consiste en réalité en deux réseaux de neurones convolutionnels : un réseau dédié à la composante diffuse de l'image (part isotrope de la réflexion de la lumière) et un autre réseau dédié à la composante spéculaire (part anisotrope de la réflexion de la lumière). Les étapes de la méthode sont les suivantes :
+				</p>
+				<ol>
+					<li>Séparation des données générées par le moteur de rendu : d'un côté les informations diffuses, de l'autre les informations spéculaires.</li>
+					<li>Pré-traitement des données adapté à la catégorie (diffus ou spéculaire) : normalisation, passage au logarithme, etc.</li>
+					<li>Passage de chacun des pixels (et de son voisinnage) dans les réseaux de neurones et application du filtrage.</li>
+					<li>Post-traitement des deux images obtenues, visant à annuler le pré-traitement réalisé.</li>
+					<li>Fusion des deux composantes (diffuse et spéculaire) et obtention de l'image finale débruitée.</li>
+				</ol>
+				
+				
+				<figure class="image" style="width:90%;">
+						<img src="images/Denoising_model_full.png" width="100%"></img>
+						<p>Architecture globale de la méthode de débruitage par génération de noyaux (<a href="https://studios.disneyresearch.com/2017/07/20/kernel-predicting-convolutional-networks-for-denoising-monte-carlo-renderings/">source</a>)</p>
+				</figure>
+				
+				<p>
+				Chacun des deux réseaux de neurones convolutionels est composée de 8 couches convolutionneles cachées avec 100 filtres 5x5 à chaque couche. La fonction d'activation ReLu est utilisée en sortie de chaque couche. Le réseau prend en entrée les informations sur un pixel et son voisinage, et il fournit en sortie un noyau de taille 21x21, les pondérations étant finalement obtenues par normalisation (Softmax). Il suffit ensuite d'appliquer ce filtre au pixel. La fonction de perte choisie est la norme 1 entre le pixel généré et le pixel cible. L'optimisation se fait de manière classique.
+				</p>
+				
+				<p>
+				La jeu d'entrainement est constitué de 600 images calculées par <em>Path Tracing</em> avec plusieurs milliers de rayons par pixel (donc des images très peu bruitées) ayant demandé de nombreuses heures de calcul. Chacune des images est ensuite découpée en patchs. Les résultats sont très bons puisqu'à partir d'une image synthétisée avec 32 rayons par pixel, puis débruitée en 12 secondes, il est possible d'obtenir un résultat visuellement équivalent voire meilleur que la même image syntétisée avec 128 rayons par pixel ! Les gains de temps sont donc considérables, ce qui explique l'emploi massif de telles méthodes de débruitage dans l'industrie du cinéma d'animation aujourd'hui.
+				</p>
+				
+				<figure class="image" style="width:100%;">
+						<img src="images/Denoising_test_train.png" width="100%"></img>
+						<p>(A gauche) Le jeu d'entraînement, composé d'images générées à 32 rayons par pixel, et de leur équivalent à 1024 rayons par pixel. (A droite) L'application de l'algorithme de débruitage sur une image à 32 rayons par pixel : le résultat est visuellement équivalent à une image à 1024 rayons par pixel (<a href="https://studios.disneyresearch.com/2017/07/20/kernel-predicting-convolutional-networks-for-denoising-monte-carlo-renderings/">source</a>)</p>
+				</figure>
+				
+				  
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<section class="section">
+			<div class="container">
+			  <h1 class="title">Tracé intelligent de contours</h1>
+				  <h2 class="subtitle">
+					Le machine learning pour aller aux Oscars</br>
+				  </h2>
+				  
+				  <center>
+				  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Congratulations to the <a href="https://twitter.com/SpiderVerse?ref_src=twsrc%5Etfw">@SpiderVerse</a> cast and crew on their <a href="https://twitter.com/hashtag/Oscars?src=hash&amp;ref_src=twsrc%5Etfw">#Oscars</a> nomination for Best Animated Feature! 🕷️🎉 <a href="https://t.co/pstwTwNdHT">pic.twitter.com/pstwTwNdHT</a></p>&mdash; Sony Pictures Animation (@SonyAnimation) <a href="https://twitter.com/SonyAnimation/status/1087712954819108865?ref_src=twsrc%5Etfw">January 22, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				  </center>
+				  
+				  
+				<p>
 				</p>
 				  
 			</div>
 		</section>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<section class="section">
+			<div class="container">
+			  <h1 class="title">Le transfert de style 3D</h1>
+				  <h2 class="subtitle">
+					Une multitude de possibilités</br>
+				  </h2>
+				  
+				<p>
+				</p>
+				  
+			</div>
+		</section>	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		<section class="section">
 			<div class="container refs">
 				<h1 class="title">Références</h1>
 				<ul>
 					<li>[1] : DisneyResearch -
-						<a id="ref_1" href="https://studios.disneyresearch.com/2016/03/24/predicting-movie-ratings-from-audience-behaviors/">Predicting Movie Ratings from Audience Behaviors</a>
+						<a id="ref_1" href="https://studios.disneyresearch.com/2017/07/20/kernel-predicting-convolutional-networks-for-denoising-monte-carlo-renderings/">Kernel-Predicting Convolutional Networks for Denoising Monte Carlo Renderings</a>
 					</li>
-					<li>[2] : Los Angeles Times -
-						<a id="ref_2"  href="https://www.latimes.com/business/hollywood/la-fi-ct-machine-learning-hollywood-20190411-story.html">Can a computer write a script? Machine learning goes Hollywood</a>
+					<li>[2] : DisneyResearch -
+						<a id="ref_2"  href="https://studios.disneyresearch.com/2018/07/30/denoising-with-kernel-prediction-and-asymmetric-loss-functions/">Denoising with Kernel Prediction and Asymmetric Loss Functions</a>
+					</li>
+					<li>[3] : FXGuide -
+						<a id="ref_3"  href="https://www.fxguide.com/fxfeatured/ink-lines-and-machine-learning/?utm_source=twitter&utm_medium=social&utm_campaign=SocialWarfare">Ink Lines and Machine Learning</a>
+					</li>
+					<li>[4] : D.Sýkora et al. -
+						<a id="ref_4"  href="https://dcgi.fel.cvut.cz/home/sykorad/styleblit.html">StyleBlit: Fast Example-Based Stylization with Local Guidance</a>
 					</li>
 				</ul>
 			</div>
