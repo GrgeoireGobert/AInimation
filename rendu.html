@@ -12,7 +12,7 @@
   <body>
   
   
-  <section id="article_hero"  class="hero is-medium is-primary" style="background-image: url(banner_script.png);">
+  <section id="article_hero"  class="hero is-medium is-primary" style="background-image: url(banners/banner_rendu_full.png);">
   <div class="hero-body">
     <div class="columns">
 	<div class="column is-2"></div>
@@ -102,7 +102,7 @@
 				</p>
 				
 				<p>
-				Pour certaines productions, les choix artistiques ajoutent des contraintes à l'étape de rendu. C'est par exemple le cas du récent film d'animation <em>Spider-Man: New Generation</em> du studio Sony Pictures Animation, qui préentait un aspect "comics" dans ses rendus. Là encore, l'intelligence artificielle est venue en aide aux artistes afin d'arriver à leurs fins.<br/>
+				Pour certaines productions, les choix artistiques ajoutent des contraintes à l'étape de rendu. C'est par exemple le cas du récent film d'animation <em>Spider-Man: New Generation</em> du studio Sony Pictures Animation, qui présentait un aspect "comics" dans ses rendus. Là encore, l'intelligence artificielle est venue en aide aux artistes afin d'arriver à leurs fins.<br/>
 				Un vaste champ de possibilités artsitiques s'ouvre avec l'arrivée récente du transfert de style 3D, permettant ainsi de se libérer de la contrainte de matériaux physiques (voir la page consacrée au <a href="texturing.html">texturing</a>) au bénéfice de styles plus exotiques.<br/>
 				Ces deux avancées, obtenues grâce à l'intelligence artificielle, seront présentées dans les paragraphes suivants.
 				</p>
@@ -153,7 +153,7 @@
 				</figure>
 				
 				<p>
-				Chacun des deux réseaux de neurones convolutionels est composée de 8 couches convolutionneles cachées avec 100 filtres 5x5 à chaque couche. La fonction d'activation ReLu est utilisée en sortie de chaque couche. Le réseau prend en entrée les informations sur un pixel et son voisinage, et il fournit en sortie un noyau de taille 21x21, les pondérations étant finalement obtenues par normalisation (Softmax). Il suffit ensuite d'appliquer ce filtre au pixel. La fonction de perte choisie est la norme 1 entre le pixel généré et le pixel cible. L'optimisation se fait de manière classique.
+				Chacun des deux réseaux de neurones convolutionels est composée de 8 couches convolutionnelles cachées avec 100 filtres 5x5 à chaque couche. La fonction d'activation ReLu est utilisée en sortie de chaque couche. Le réseau prend en entrée les informations sur un pixel et son voisinage, et il fournit en sortie un noyau de taille 21x21, les pondérations étant finalement obtenues par normalisation (Softmax). Il suffit ensuite d'appliquer ce filtre au pixel. La fonction de perte choisie est la norme 1 entre le pixel généré et le pixel cible. L'optimisation se fait de manière classique.
 				</p>
 				
 				<p>
@@ -197,6 +197,33 @@
 				  
 				  
 				<p>
+				Lors de la production du film d'animation <em>Spiderman: Into the Spiderverse </em>, le studio Sony Pictures Imageworks a souhaité appliquer un style particulier à ses rendus, proche des illustrations des "comics". Cela nécessitait, entre autres, de superposer au rendu des "lignes d'encre" au niveau de certains contours (joues, nez, yeux, etc.). Cet effet est visible sur l'illustration du tweet ci-dessus. La difficulté réside dans le fait que ces lignes dépendent de l'angle de vue et de l'expression faciale du personnage.<br/>
+				Dans un premier temps, un outil manuel a été développé, permettant aux artistes de dessiner ces "lignes d'encre" sur le rendu. Cependant, ce processus devant être fait image par image, cela demandait beaucoup de temps. C'est pourquoi des chercheurs du studio ont développé un outil d'intelligence artificielle, permettant de calculer automatiquement ces "lignes d'encre". Les artistes n'avaient alors plus qu'à réaliser les ajustements nécessaires.<br/><br/>
+				</p>
+				
+				<p>
+				Les maillages 3D, utilisés dans le secteur du cinéma d'animation, présentent l'avantage de pouvoir être "mis à plat" (passage du monde 3D à un espace 2D déformant le moins possible le maillage) par le biais d'une <em>paramétrisation</em>.<br/>
+				Les détails sur la structure de l'algorithme utilisé n'ont pas été dévoilés par le studio. Ce dernier prend en entrée des informations sur l'orientation relative de la tête du personnage par rapport à la caméra ainsi que des informations sur l'expression faciale du personnage. Il fournit en sortie un ensemble de "lignes d'encre" dans l'espace de paramétrisation 2D, qu'il n'y a alors plus qu'à projeter dans le monde 3D par l'opération inverse.<br/><br/>
+				</p>
+				
+				<p>
+				Le jeu d'entrainement a été réalisé en plusieurs étapes :
+				</p>
+				<ol>
+					<li>Tout d'abord, des artistes ont déssiné les "lignes d'encre" correspondant à 600 poses (position et expression faciale) différentes de différents personnages.</li>
+					<li>Un premier algorithme a été entraîné sur ce jeu de données.</li>
+					<li>Cet algorithme a été utilisé pour générer automatiquement une nouvelle série de "lignes d'encre" qui ont été corrigées par des artistes si nécessaire.</li>
+					<li>Cet ensemble de "lignes d'encre" agrandi a permis d'entraîner un second algorithme plus performant que le premier. C'est ce dernier qui a finalement été utilisé lors de la production.</li>
+				</ol>
+				
+				
+				<figure class="image" style="width:70%;">
+						<img src="images/miles_inklines_crop.jpg" width="100%"></img>
+						<p>Un exemple de résultat final obtenu (<a href="https://www.fxguide.com/fxfeatured/ink-lines-and-machine-learning/?utm_source=twitter&utm_medium=social&utm_campaign=SocialWarfare">source</a>)</p>
+				</figure>
+				
+				<p>
+				L'intelligence artificielle a encore une fois été mise au service de l'artistique, permettant d'automatiser des tâches répétitives de haut niveau. Aucune solution classique n'avait permis d'obtenir des résultats équivalents.
 				</p>
 				  
 			</div>
@@ -267,8 +294,8 @@
 					<li>[3] : FXGuide -
 						<a id="ref_3"  href="https://www.fxguide.com/fxfeatured/ink-lines-and-machine-learning/?utm_source=twitter&utm_medium=social&utm_campaign=SocialWarfare">Ink Lines and Machine Learning</a>
 					</li>
-					<li>[4] : D.Sýkora et al. -
-						<a id="ref_4"  href="https://dcgi.fel.cvut.cz/home/sykorad/styleblit.html">StyleBlit: Fast Example-Based Stylization with Local Guidance</a>
+					<li>[4] : Jakub Fišer et al. -
+						<a id="ref_4"  href="https://dcgi.fel.cvut.cz/home/sykorad/stylit">StyLit: Illumination-Guided Example-Based Stylization of 3D Renderings</a>
 					</li>
 				</ul>
 			</div>

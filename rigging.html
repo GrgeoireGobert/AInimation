@@ -89,7 +89,7 @@
 				  </h2>
 				  
 				    <p>
-					Les objets issus de la modélisation, et en particulier les personnages, présentent le défaut d'être statiques. En effet, les personnages sont modélisés par l'artiste dans une certaine pose (souvent les bras en forme de "T"), mais ces derniers doivent pouvoir adopter une infinité de poses différentes dans le but de produire un certain mouvement (marcher, courir, sauter, froncer les sourcils, rire, etc.). Les méthodes de rigging permettent aux artistes, via la manipulation d'une structure simple, de déformer le maillage d'un personnage et ainsi de lui faire prendre vie. Parmi ces structures simples, il existe notamment le squelette virtuel, la cage de déformation, mais aussi le <em>motion capture</em>. Il est nécessaire, lorsque ces structures sont manipulées, d'induire la déformation du maillage adéquate. Cette transformation (structure simple vers maillage) présente souvent certains défauts, auxquels l'intelligence artificielle pourrait fournir des solutions.<br/><br/>
+					Les objets issus de la modélisation, et en particulier les personnages, présentent le défaut d'être statiques. En effet, les personnages sont modélisés par l'artiste dans une certaine pose (souvent les bras en forme de "T"), mais ces derniers doivent pouvoir adopter une infinité de poses différentes dans le but de produire un certain mouvement (marcher, courir, sauter, froncer les sourcils, rire, etc.). Les méthodes de rigging permettent aux artistes, via la manipulation d'une structure simple, de déformer le maillage d'un personnage et ainsi de lui faire prendre vie. Parmi ces structures simples, il existe notamment le squelette virtuel, la cage de déformation, mais aussi le <em>motion capture</em>. Il est nécessaire, lorsque ces structures sont manipulées, d'induire la déformation adéquate du maillage. Cette transformation (structure simple vers maillage) présente souvent certains défauts, auxquels l'intelligence artificielle pourrait fournir des solutions.<br/><br/>
 					</p>
 					
 					<p>
@@ -134,7 +134,7 @@
 					</figure>
 					
 					<p>
-					La structure permettant de transcrire des données de <em>motion capture</em> adaptées à un personnage A en des données adaptées à un personnage B s'appuie sur des <a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le_de_m%C3%A9lange_gaussien">modèles de mélange gaussiens</a>. L'idée est de passer par un espace latent commun aux deux personnages. Un premier modèle de mélange gaussien permet de passer des poses du personnage A à l'espace latent. Un second modèle de mélange gaussien permet de passer des poses du personnage B à l'espace latent. Même si certains hyperparamètres (comme la dimension de l'espace latent, le nombre de gaussiennes mélangées, etc.) sont fixés a priori, d'autres paramètres (comme la moyenne et l'écart type dans chaque direction de chaque gaussienne) sont obtenus par optimisation de manière à ce que, pour une paire de poses (A,B) correspondantes, les deux modèles mènent au même point dans l'espace latent.<br/>
+					La structure permettant de transcrire des données de <em>motion capture</em> adaptées à un personnage A en des données adaptées à un personnage B s'appuie sur des <a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le_de_m%C3%A9lange_gaussien">modèles de mélanges gaussiens</a>. L'idée est de passer par un espace latent commun aux deux personnages. Un premier modèle de mélange gaussien permet de passer des poses du personnage A à l'espace latent. Un second modèle de mélange gaussien permet de passer des poses du personnage B à l'espace latent. Même si certains hyperparamètres (comme la dimension de l'espace latent, le nombre de gaussiennes mélangées, etc.) sont fixés a priori, d'autres paramètres (comme la moyenne et l'écart type dans chaque direction de chaque gaussienne) sont obtenus par optimisation de manière à ce que, pour une paire de poses (A,B) correspondantes, les deux modèles mènent au même point dans l'espace latent.<br/>
 					Une fois les modèles optimaux appris, il ne reste plus qu'à les utiliser avec une nouvelle pose A en entrée pour obtenir le point correspondant dans l'espace latent puis trouver la pose B associée à ce point.
 					</p>
 					
@@ -150,7 +150,7 @@
 					
 					<figure class="image" style="width:80%;">
 						<iframe width="100%" height="400" src="https://www.youtube.com/embed/h_HAVnDCfkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<p>Quelques résultats obtenu en transfert de rig.</p>
+					<p>Quelques résultats obtenus en transfert de rig.</p>
 					</figure>
 					
 					<p>
@@ -194,7 +194,7 @@
 					<ol>
 						<li>Réaliser une mise à l'échelle en hauteur afin de normaliser la taille de l'acteur.</li>
 						<li>Trouver une repère de référence commun aux différentes poses.</li>
-						<li>Exprimer, en partant de la pose cible du personnage, la position d'un certain nombre de marqueurs virtuels dans l'espece de référence précédent.</li>
+						<li>Exprimer, en partant de la pose cible du personnage, la position d'un certain nombre de marqueurs virtuels dans l'espace de référence précédent.</li>
 						<li>Récupérer les données statistiques (moyenne, écart-type) des marqueurs à partir des données de <em>motion capture</em> de la séquence.</li>
 						<li>Générer, à partir de ces statistiques, des positions de marqueurs virtuels eronnées, voire même parfois manquantes.</li>
 						<li>Normaliser ces positions, qui seront données en entrée du réseau de neurones.</li>

@@ -147,7 +147,7 @@
 				<p>
 				Ils ont entraîné un réseau de neurones convolutionnel capable, à partir d'une configuration (position de la source du fluide, vitesse à la source, géométrie de l'environnement, paramètres physiques du fluide), de prédire l'état du fluide à un instant donné de la simulation. Ainsi, si l'écoulement est en 3D, il fournit une grille 3D dont chacune des cases comporte la valeur ponctuelle d'un champ vectoriel.<br/>
 				Le réseau de neurones est composé de plusieurs blocs successifs, chacun des blocs étant composé d'une séquence de 5 paires [couche convolutionelle / activation Leaky ReLU].<br/>
-				De nombreuses simulations classiques d'écoulements ont déjà été réalisées durant de nombreuses années, ce qui a permis de constituer une base de données d'entraînement. Le réseau est entraîné de manière à fournir un champ vectoriel dont le rotationnel doit être aussi proche que possible du champ de vitesses cible. Cela permet d'avoir un champ de vitesses à divergence nulle (puisque la divergene du rotationel est nulle) et ainsi de vérifier l'équation de conservation de la masse.<br/>
+				De nombreuses simulations classiques d'écoulements ont déjà été réalisées durant de nombreuses années, ce qui a permis de constituer une base de données d'entraînement. Le réseau est entraîné de manière à fournir un champ vectoriel dont le rotationnel doit être aussi proche que possible du champ de vitesses cible. Cela permet d'avoir un champ de vitesses à divergence nulle (puisque la divergence du rotationel est nulle) et ainsi de vérifier l'équation de conservation de la masse.<br/>
 				</p>
 				
 				<figure class="image" style="width:70%;">
@@ -166,7 +166,7 @@
 				</figure>
 				
 				<p>
-				Les résultats obtenus par cette méthode sont excellents, permettant de générer des simulations de très bonne qualité, jusqu'à 700 fois plus rapidement que les méthodes classiques. Les gains en productivité et en ressources sont donc conséquents. Il faut toutefois nuancer ce gain puisque le réseau doît au préalable avoir été entraîné sur la configuration simulée, et ne se généralise donc pas à n'importe quelle configuration d'écoulement.
+				Les résultats obtenus par cette méthode sont excellents, permettant de générer des simulations de très bonne qualité, jusqu'à 700 fois plus rapidement que les méthodes classiques. Les gains en productivité et en ressources sont donc conséquents. Il faut toutefois nuancer ce gain puisque le réseau doit au préalable avoir été entraîné sur la configuration simulée, et ne se généralise donc pas à n'importe quelle configuration d'écoulement.
 				</p>
 
 			</div>
@@ -216,7 +216,7 @@
 				</p>
 				
 				<p>
-				Les chercheurs ont eu l'idée de chercher, par optimisation, le champ de vitesse qui permettrait de former "naturellement" les motifs souhaités lors de l'écoulement de la fumée. Les étapes sont donc les suivantes :
+				Les chercheurs ont eu l'idée de chercher, par optimisation, le champ de vitesses qui permettrait de former "naturellement" les motifs souhaités lors de l'écoulement de la fumée. Les étapes sont donc les suivantes :
 				</p>
 				<ol>
 					<li>Tout d'abord, l'image "sémantique" souhaitée est passée dans le réseau préentrainé GoogLeNet, afin d'en extraire les <em>feature maps</em> des couches profondes.</li>
@@ -235,7 +235,7 @@
 					
 					
 				<p>
-				Lors du transfert de style sur l'intervalle temporel d'une simulation, la consistance temporelle est assurée directement au niveau de l'évolution temporelle du champ de vitesse. Ce dernier est calculé pour chacun des instants indépendamment, puis un lissage sur une fenêtre temporelle est réalisé.<br/>
+				Lors du transfert de style sur l'intervalle temporel d'une simulation, la consistance temporelle est assurée directement au niveau de l'évolution temporelle du champ de vitesses. Ce dernier est calculé pour chacun des instants indépendamment, puis un lissage sur une fenêtre temporelle est réalisé.<br/>
 				Les possibilités artistiques offertes par cette méthodes sont très vastes, puisqu'il est possible de contrôler de manière précise un écoulement de fumée. La vidéo suivante présente quelques résultats.
 				</p>
 				
