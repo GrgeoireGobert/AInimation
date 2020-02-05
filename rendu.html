@@ -103,7 +103,7 @@
 				
 				<p>
 				Pour certaines productions, les choix artistiques ajoutent des contraintes à l'étape de rendu. C'est par exemple le cas du récent film d'animation <em>Spider-Man: New Generation</em> du studio Sony Pictures Animation, qui présentait un aspect "comics" dans ses rendus. Là encore, l'intelligence artificielle est venue en aide aux artistes afin d'arriver à leurs fins.<br/>
-				Un vaste champ de possibilités artsitiques s'ouvre avec l'arrivée récente du transfert de style 3D, permettant ainsi de se libérer de la contrainte de matériaux physiques (voir la page consacrée au <a href="texturing.html">texturing</a>) au bénéfice de styles plus exotiques.<br/>
+				Un vaste champ de possibilités artsitiques s'ouvre avec l'arrivée récente du transfert de style, permettant ainsi de se libérer de la contrainte de matériaux physiques (voir la page consacrée au <a href="texturing.html">texturing</a>) au bénéfice de styles plus exotiques.<br/>
 				Ces deux avancées, obtenues grâce à l'intelligence artificielle, seront présentées dans les paragraphes suivants.
 				</p>
 				
@@ -198,7 +198,7 @@
 				  
 				<p>
 				Lors de la production du film d'animation <em>Spiderman: Into the Spiderverse </em>, le studio Sony Pictures Imageworks a souhaité appliquer un style particulier à ses rendus, proche des illustrations des "comics". Cela nécessitait, entre autres, de superposer au rendu des "lignes d'encre" au niveau de certains contours (joues, nez, yeux, etc.). Cet effet est visible sur l'illustration du tweet ci-dessus. La difficulté réside dans le fait que ces lignes dépendent de l'angle de vue et de l'expression faciale du personnage.<br/>
-				Dans un premier temps, un outil manuel a été développé, permettant aux artistes de dessiner ces "lignes d'encre" sur le rendu. Cependant, ce processus devant être fait image par image, cela demandait beaucoup de temps. C'est pourquoi des chercheurs du studio ont développé un outil d'intelligence artificielle, permettant de calculer automatiquement ces "lignes d'encre". Les artistes n'avaient alors plus qu'à réaliser les ajustements nécessaires.<br/><br/>
+				Dans un premier temps, un outil manuel a été développé, permettant aux artistes de dessiner ces "lignes d'encre" sur le rendu. Cependant, ce processus devant être fait image par image, cela demandait beaucoup de temps. C'est pourquoi des chercheurs du studio <a href="#ref_3">[3]</a> ont développé un outil d'intelligence artificielle, permettant de calculer automatiquement ces "lignes d'encre". Les artistes n'avaient alors plus qu'à réaliser les ajustements nécessaires.<br/><br/>
 				</p>
 				
 				<p>
@@ -244,12 +244,37 @@
 		
 		<section class="section">
 			<div class="container">
-			  <h1 class="title">Le transfert de style 3D</h1>
+			  <h1 class="title">Le transfert de style</h1>
 				  <h2 class="subtitle">
 					Une multitude de possibilités</br>
 				  </h2>
 				  
 				<p>
+				Le <em>Path Tracing</em> nécessite de décrire physiquement le comportement de la matière et permet d'obtenir des rendus très réalistes. Il est cependant très compliqué d'adapter cette technique dans le but d'obtenir un style artistique particulier. C'est dans ce cas que les récentes découvertes en terme de transfert de style peuvent être intéressantes.<br/><br/>
+				</p>
+				
+				<p>
+				En 2015, des chercheurs de l'université de Tübingen <a href="#ref_4">[4]</a> ont exploité les avancées dans le domaine de la classification d'images par réseaux de neurones profonds afin de créer un algorithme de transfert de style très efficace. Ces réseaux de neurones profonds, dédiés à la classification d'images, sont constitués d'un empilement de couches convolutionelles. A son arrivée dans chacune des couches, la sortie (l'équivalent d'une image) de la couche précédente subit plusieurs opérations de filtrage, menant à un ensemble de <em>feature maps</em> (l'équivalent d'une image) en sortie. Ces <em>feature maps</em> ont la particularité de comporter des informations précises sur le contenu et le style d'une image. Le contenu est décrit par la valeur des <em>feature maps</em>, les <em>feature maps</em> des couches profondes permettent d'identifier des concepts propres au contenu, particulièrement discriminants. Le style est décrit par la corrélation entre les <em>feature maps</em> d'une même couche.<br/>
+				Ainsi, pour transférer le style d'une image sur une autre image, tout en conservant son contenu, il s'agit de résoudre un problème d'optimisation sur une fonction de perte définie à partie de ces <em>feature maps</em>. Un exemple de résultat est disponible sur l'image suivante.
+				</p>
+				
+				<figure class="image" style="width:80%;">
+						<img src="images/DeepArt_example.png" width="100%"></img>
+						<p>Un exemple d'application de la méthode de transfert de style (<a href="https://arxiv.org/pdf/1508.06576.pdf">source</a>). Plusieurs styles artistiques (B,C,D) sont appliqués à l'image d'origine (A).</p>
+				</figure>
+				
+				<p>
+				Les perspectives offertes par cette méthode dans le secteur du cinéma d'animation paraissent intéressantes. Cependant, d'autres techniques, qui ne sont pas basées sur des algorithmes d'intelligence artificielle, permettent d'obtenir de meilleurs résultats. C'est le cas de StyleLit <a href="#ref_5">[5]</a>, mis au point par des chercheurs de l'université de Prague. Leur algorithme exploite les informations de "chemin d'un rayon lumineux" fournies par le moteur de rendu. Par exemple, un rayon lumineux arrivant sur l'oeil peut être parti d'une source de lumière (L), avoir subi 2 rebonds diffus (D) puis un rebond spéculaire (S) avant d'atteindre l'oeil (E). Son chemin sera alors décrit par l'expression <em>LDDSE</em>.<br/>
+				Il suffit alors à un artiste de dessiner une scène simple avec le style voulu, puis de générer les expressions des chemins pour cette scène simple, pour avoir une table de correspondance entre expression et style. Il suffit ensuite d'appliquer ces styles aux endroits appropriés pour n'importe quelle nouvelle scène.
+				</p>
+				
+				<figure class="image" style="width:90%;">
+						<img src="images/StyleLit_example.png" width="100%"></img>
+						<p>Résultats obtenus sans usage d'intelligence artificielle (<a href="https://dcgi.fel.cvut.cz/home/sykorad/stylit">source</a>). (Première image) La scène de référence. (Images suivantes) L'artiste dessine la scène simple (sphère dans l'encart en haut à droite de chaque image) et le style est appliqué à la scène. </p>
+				</figure>
+				
+				<p>
+				Les algorithmes de transfert de style utilisant les réseaux de neurones profonds dédiés à la classification n'ont pas accés à l'information de "chemin d'un rayon lumineux". Il pourrait toutefois être envisageable d'améliorer leurs résultats en exploitant ces informations, spécifiquement pour le cinéma d'animation.
 				</p>
 				  
 			</div>
@@ -294,8 +319,11 @@
 					<li>[3] : FXGuide -
 						<a id="ref_3"  href="https://www.fxguide.com/fxfeatured/ink-lines-and-machine-learning/?utm_source=twitter&utm_medium=social&utm_campaign=SocialWarfare">Ink Lines and Machine Learning</a>
 					</li>
-					<li>[4] : Jakub Fišer et al. -
-						<a id="ref_4"  href="https://dcgi.fel.cvut.cz/home/sykorad/stylit">StyLit: Illumination-Guided Example-Based Stylization of 3D Renderings</a>
+					<li>[4] : Leon A. Gatys et al. -
+						<a id="ref_4"  href="https://arxiv.org/pdf/1508.06576.pdf">A Neural Algorithm of Artistic Style</a>
+					</li>
+					<li>[5] : Jakub Fišer et al. -
+						<a id="ref_5"  href="https://dcgi.fel.cvut.cz/home/sykorad/stylit">StyLit: Illumination-Guided Example-Based Stylization of 3D Renderings</a>
 					</li>
 				</ul>
 			</div>
