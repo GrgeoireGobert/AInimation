@@ -156,7 +156,7 @@
 				</figure>
 				
 				<p>
-				Le réseau de neurones précédent permet d'obtenir la simulation de l'écoulement à un instant donné. Pour pouvoir obtenir la simulation sur un intervalle de temps, un auto-encodeur (encodeur-décodeur) a été développé. L'encodeur a la structure inverse de celle du réseau précédemment décrit tandis que le découdeur correspond au réseau précédent. Ainsi, prenant en entrée un champ de vitesses, l'encodeur le convertit en un vecteur (appartenant à un espace dit "latent") qui est ensuite reconvertit par le décodeur en champ de vitesses (idéalement celui en entrée de l'encodeur).<br/>
+				Le réseau de neurones précédent permet d'obtenir la simulation de l'écoulement à un instant donné. Pour pouvoir obtenir la simulation sur un intervalle de temps, un auto-encodeur (encodeur-décodeur) a été développé. L'encodeur a la structure inverse de celle du réseau précédemment décrit tandis que le découdeur correspond au réseau précédent. Ainsi, prenant en entrée un champ de vitesses, l'encodeur le convertit en un vecteur (appartenant à un espace dit "latent") qui est ensuite reconverti par le décodeur en champ de vitesses (idéalement celui en entrée de l'encodeur).<br/>
 				Quel est l'intérêt de ce montage ? Un nouveau réseau de neurones classique (perceptron multi-couches) a ainsi pu être entrainé à générer une séquence de vecteurs latents, permettant d'obtenir le résultat d'une simulation d'écoulement sur un intervalle de temps.
 				</p>
 				
