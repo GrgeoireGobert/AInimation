@@ -225,7 +225,7 @@
 					<li>Une série de rendus, effectués à différents endroits, sont calculés. Cet ensemble de rendus est lui aussi passé dans le réseau préentrainé GoogLeNet afin d'en extraire un ensemble de  <em>feature maps</em>.</li>
 					<li>La fonction de perte est alors évaluée. Elle mesure la distance entre le couple (sémantique + style) des rendus générés et celui des images cibles. Cela est possible par la mesure de la distance euclidienne entre les <em>feature maps</em> pour l'aspect sémantique, et entre les produits scalaires des <em>feature maps</em> pour le style.</li>
 					<li>Par rétropropagation du gradient, un nouveau champ de vitesses théoriquement meilleur est calculé, et les étapes 4 à 6 se repètent jusqu'à un optimum.</li>
-					<li>Une fois l'optimum atteint, le processus est réitéré avec une discrétisation spatiale plus finale, permettant ainsi d'obtenir un résultat plus précis.</li>
+					<li>Une fois l'optimum atteint, le processus est réitéré avec une discrétisation spatiale plus fine, permettant ainsi d'obtenir un résultat plus précis.</li>
 				</ol>
 				
 				<figure class="image" style="width:90%;">
